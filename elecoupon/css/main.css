@@ -1,0 +1,47 @@
+.b-ad{
+	border-color:#adadad;
+}
+.price{
+	background-image:url('myImg/img-bg.png');
+}
+.bot-bg{
+	background-image:url('myImg/bot-bg.png');
+}
+.price-wh{
+	min-width:2.5em;
+	min-height:1.25em;
+}
+.b-dash{
+	border-right:1px dashed #adadad;
+}
+.umar-8{
+	margin:0  1.2em;
+}
+.uinn-5{
+	padding:0 .5em .5em .5em;
+}
+.t-f7{
+	color:#f78c3e;
+}
+.t-4c{
+	color:#4c4c4c;
+}
+.t-b3{
+	color:#b3b3b3;
+}
+.uinn-t5{
+	padding:.5em 0;
+}
+.t-4c{
+	color:#4c4c4c;
+}
+.indent{
+	text-indent:2em
+}
+.bot-wh{
+	min-width:0.75em;
+	min-height:0.375em;
+}
+.margin-bot{
+	margin:.625em 0;
+}

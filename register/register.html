@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script></script>
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="up ub ub-ver" tabindex="0">
+            <div class="ub umhh1 umar-t1 ub-pj c-wh2" id="tabview">
+                
+            </div>
+            <div class="ub-f1 tx-l ub ub-ver c-wh2">
+                <div class="ub c-wh umar-t umar-b ubb ubt bc-border uinn-r1">
+                    <div class="ub ub-ac umar-l ulev-app1">
+                        手机号
+                    </div>
+                    <div class="ubr b-gra umar-a"></div>
+                    <div class="ub-f1">
+                        <div class="ub ub-ac umh5 ub-f1">
+                    <div class="uinput ub ub-f1">
+                        <input placeholder="请输入手机号" type="text" class="ub-f1">
+                    </div>
+                </div>
+                    </div>
+                </div>
+                <div class="uinn">
+                    <div class="uinn-at1">
+                        <div class="btn ub ub-ac bc-text-head ub-pc bc-btn"  id="submit">
+                            注册
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../js/appcan.js"></script>
+    <script src="../js/appcan.control.js"></script>
+    <script src="../js/appcan.tab.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        var tabview = appcan.tab({
+            selector : "#tabview",
+            hasIcon : false,
+            hasAnim : true,
+            hasLabel : true,
+            hasBadge : false,
+            data : [{
+                label : "手机注册",
+            }, {
+                label : "邮箱注册",
+            }]
+        });
+        tabview.on("click", function(obj, index) {
+            //appcan.window.selectMultiPopover("content", index);
+        })
+        appcan.button("#submit", "ani-act", function() {
+            $("form").submit();
+        })
+    </script>
+</html>

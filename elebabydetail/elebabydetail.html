@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="" style="">
+            <div id="tabview" class="ub ubb bc-border uinn ub-pc" >
+
+            </div>
+            <div id="ele_comment"></div>
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.tab.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+            commentList();
+        })
+        var tabview = appcan.tab({
+            selector : "#tabview",
+            hasIcon : false,
+            hasAnim : true,
+            hasLabel : true,
+            hasBadge : false,
+            data : [{
+                label : "全部",
+            }, {
+                label : '好评<span class="t-org-f1 ufm1">999+</span>',
+            }, {
+                label : '中评<span class="t-org-f1 ufm1">999+</span>',
+            }, {
+                label : '差评<span class="t-org-f1 ufm1">45</span>',
+            }]
+        });
+        tabview.on("click", function(obj, index) {
+
+        })
+        function commentList() {
+            var arrData = [{
+                "avator" : "\'css/myImg/userImg.png\'",
+                "username" : "用户名",
+                "comment" : "味道还不错，物流一般。。。散装包装，生产日期见合格证，但我没看到合格证，所...",
+                "goodsImg" : [{
+                    "gsimg" : "\'css/myImg/img1.png\'",
+                }, {
+                    "gsimg" : "\'css/myImg/img2.png\'",
+                }, {
+                    "gsimg" : "\'css/myImg/img3.png\'",
+                }, {
+                    "gsimg" : "\'css/myImg/img4.png\'",
+                }, {
+                    "gsimg" : "\'css/myImg/img5.png\'",
+                }],
+                "time" : "2014.02.25",
+                "addTo" : "4天后追加，质量可好了，下次还来",
+            }, {
+                "avator" : "\'css/myImg/userImg.png\'",
+                "username" : "小枫",
+                "comment" : "味道还不错，物流一般。。。散装包装，生产日期见合格证，但我没看到合格证，所...",
+                "goodsImg" : [],
+                "time" : "2014.02.25",
+                "addTo" : "[掌柜解释]谢谢！",
+            }];
+            var tmpl = '<div class="ub uinn-ebt ubb bc-border">' + '	<div class="ub-img uwh-bdl mar-ar1" style="background-image:url(${avator});"></div>' + '	<div class="ub-f1 ufl">' + '		<div class="ulev-7 umar-t">${username}</div>' + '		<div class="t-9b ulev-7 umar-tb uh-ebt1 ulh-ebt ut-s-ebt">${comment}</div>' + '		<div class="ub ub-ac">' + '			${cb:goodsImg}' + '		</div>' + '		<div class="t-9b ulev-6 umar-at1">${time}</div>' + '		<div class="t-82 c-d0">' + '			<div class="topdirection uabs-ebt1"></div>' + '			<div class="uinn ulev-7 umar-a umar-t-ebt2">${addTo}</div>' + '		</div>' + '	</div>' + '</div>'
+            var s = appcan.tempRenderList(tmpl, arrData, appcan.getObjLength(arrData), tmpleCb);
+            var d = document.createElement('DIV');
+            d.innerHTML = s;
+            $('#ele_comment')[0].appendChild(d);
+        }
+
+        function tmpleCb(a, b) {
+            var str = '';
+            switch(b[1]) {
+            case "goodsImg":
+                var arr1 = a['goodsImg'];
+                for (var i = 0; i < arr1.length; i++) {
+                    str += '<div class="uwh-bdl ub-img umar-r-ebt" style="background-image:url(' + arr1[i].gsimg + ');"></div>'
+                }
+                return str;
+            }
+        }
+
+    </script>
+</html>

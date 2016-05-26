@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+    </head>
+    <body class="um-vp bc-bg ub-ver" ontouchstart>
+        <div class="ub ub-ver">
+            <div id="slider" class="slider">
+
+            </div>
+            <div id="listview">
+
+            </div>
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.slider.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            //appcan.initBounce();
+        })
+        var slider = appcan.slider({
+            selector : '#slider',
+            aspectRatio : 9 / 16,
+            hasLabel : true,
+            index : 1
+        });
+        slider.set([{
+            img : "./css/myImg/news1.jpg",
+            label : "哭泣的丽都"
+        }, {
+            img : "./css/myImg/news2.jpg",
+            label : "客机失联谜团或许永远无法解开"
+        }, {
+            img : "./css/myImg/yaoming.png",
+            label : "姚明3岁女儿1米3，遗传公式推测未来身高超1米9"
+        }]);
+
+        var updateData = [{
+            title : "国务院严格控制新设行政许可",
+            describe : "国务院总理李克强21日主持召开国务院常务会议，决定出台严格控制新设行政许可的",
+            note : "78跟帖",
+            icon : "css/myImg/newsImg1.png"
+        }, {
+            title : "国务院严格控制新设行政许可",
+            describe : "国务院总理李克强21日主持召开国务院常务会议，决定出台严格控制新设行政许可的",
+            note : "78跟帖",
+            icon : "css/myImg/newsImg2.png"
+        }, {
+            title : "国务院严格控制新设行政许可",
+            describe : "国务院总理李克强21日主持召开国务院常务会议，决定出台严格控制新设行政许可的",
+            note : "78跟帖",
+            icon : "css/myImg/newsImg3.png"
+        }, {
+            title : "国务院严格控制新设行政许可",
+            describe : "国务院总理李克强21日主持召开国务院常务会议，决定出台严格控制新设行政许可的",
+            note : "78跟帖",
+            icon : "css/myImg/newsImg1.png"
+        }, {
+            title : "国务院严格控制新设行政许可",
+            describe : "国务院总理李克强21日主持召开国务院常务会议，决定出台严格控制新设行政许可的",
+            note : "78跟帖",
+            icon : "css/myImg/newsImg2.png"
+        }, {
+            title : "国务院严格控制新设行政许可",
+            describe : "国务院总理李克强21日主持召开国务院常务会议，决定出台严格控制新设行政许可的",
+            note : "78跟帖",
+            icon : "css/myImg/newsImg3.png"
+        }, {
+            title : "国务院严格控制新设行政许可",
+            describe : "国务院总理李克强21日主持召开国务院常务会议，决定出台严格控制新设行政许可的",
+            note : "78跟帖",
+            icon : "css/myImg/newsImg1.png"
+        }, {
+            title : "国务院严格控制新设行政许可",
+            describe : "国务院总理李克强21日主持召开国务院常务会议，决定出台严格控制新设行政许可的",
+            note : "78跟帖",
+            icon : "css/myImg/newsImg2.png"
+        }, {
+            title : "国务院严格控制新设行政许可",
+            describe : "国务院总理李克强21日主持召开国务院常务会议，决定出台严格控制新设行政许可的",
+            note : "78跟帖",
+            icon : "css/myImg/newsImg3.png"
+        }];
+        var lv1 = appcan.listview({
+            selector : "#listview",
+            type : "thickLine",
+            hasIcon : true,
+            hasAngle : false
+        });
+        lv1.set(updateData);
+    </script>
+</html>

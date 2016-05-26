@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<widget widgetId="" pid="" appId="11359992" channelCode="0000" version="00.01.0001" viewmode="application" width="320" height="480" sreensize="4.5"> 
+  <name>AppCan秀</name>  
+  <description/>  
+  <author email=""></author>  
+  <icon src="icon.png"/>  
+  <license href=""/>  
+  <content src="index.html" encoding="utf-8"/>  
+  <updateurl/>  
+  <logserverip/>  
+  <showmyspace>false</showmyspace>  
+  <obfuscation>false</obfuscation>  
+  <bgcolor>#fefefe</bgcolor>  
+  <orientation>15</orientation> 
+</widget>

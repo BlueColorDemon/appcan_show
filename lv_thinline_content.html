@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="./css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/ui-box.css">
+        <link rel="stylesheet" href="./css/ui-base.css">
+        <link rel="stylesheet" href="./css/ui-color.css">
+        <link rel="stylesheet" href="./css/appcan.icon.css">
+        <link rel="stylesheet" href="./css/appcan.control.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+
+        <div id="treeview"  class="ubt bc-border sc-bg">
+
+        </div>
+
+        <script src="./js/appcan.js"></script>
+        <script src="./js/appcan.control.js"></script>
+        <script src="./js/appcan.listview.js"></script>
+        <script src="./js/appcan.treeview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        appcan.button(".btn", "ani-act", function() {
+            console.log("click btn", this.id);
+        })
+        var dataSrc = [{
+            "@attributes" : {
+                "id" : "content1",
+                "name" : "\u767b\u5f55",
+                "thumb" : "root\/res\/title_all"
+            },
+            "case" : [{
+                "@attributes" : {
+                    "id" : "loginGen1",
+                    "name" : "loginGen1",
+                    "thumb" : "root\/contents\/loginGen1\/loginGen1.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "loginGen2",
+                    "name" : "loginGen2",
+                    "thumb" : "root\/contents\/loginGen2\/loginGen2.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "login2",
+                    "name" : "login2",
+                    "thumb" : "root\/contents\/login2\/login2.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "login3",
+                    "name" : "login3",
+                    "thumb" : "root\/contents\/login3\/login3.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "login4",
+                    "name" : "login4",
+                    "thumb" : "root\/contents\/login4\/login4.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "login",
+                    "name" : "login",
+                    "thumb" : "root\/contents\/login\/login.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "login5",
+                    "name" : "login5",
+                    "thumb" : "root\/contents\/login5\/login5.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "oa_login",
+                    "name" : "oa_login",
+                    "thumb" : "root\/contents\/oa_login\/oa_login.png"
+                }
+            }]
+        }, {
+            "@attributes" : {
+                "id" : "content2",
+                "name" : "\u4e3b\u9875",
+                "thumb" : "root\/res\/title_all"
+            },
+            "case" : [{
+                "@attributes" : {
+                    "id" : "business_home",
+                    "name" : "business_home",
+                    "thumb" : "root\/contents\/business_home\/business_home.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "read_list",
+                    "name" : "read_list",
+                    "thumb" : "root\/contents\/read_list\/read_list.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "squared",
+                    "name" : "squared",
+                    "thumb" : "root\/contents\/squared\/squared.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "picture2",
+                    "name" : "picture2",
+                    "thumb" : "root\/contents\/picture2\/picture2.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "oa_home",
+                    "name" : "oa_home",
+                    "thumb" : "root\/contents\/oa_home\/oa_home.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "news_appcan1",
+                    "name" : "news_appcan1",
+                    "thumb" : "root\/contents\/news_appcan1\/news_appcan1.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "news_appcan",
+                    "name" : "news_appcan",
+                    "thumb" : "root\/contents\/news_appcan\/news_appcan.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "Metro1",
+                    "name" : "Metro1",
+                    "thumb" : "root\/contents\/Metro1\/Metro1.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "metro2",
+                    "name" : "metro2",
+                    "thumb" : "root\/contents\/metro2\/metro2.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "elecSupp2",
+                    "name" : "elecSupp2",
+                    "thumb" : "root\/contents\/elecSupp2\/elecSupp2.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "elecSupp",
+                    "name" : "elecSupp",
+                    "thumb" : "root\/contents\/elecSupp\/elecSupp.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "gallery1",
+                    "name" : "gallery1",
+                    "thumb" : "root\/contents\/gallery1\/gallery1.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "gallery3",
+                    "name" : "gallery3",
+                    "thumb" : "root\/contents\/gallery3\/gallery3.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "home1",
+                    "name" : "home1",
+                    "thumb" : "root\/contents\/home1\/home1.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "home2",
+                    "name" : "home2",
+                    "thumb" : "root\/contents\/home2\/home2.png"
+                }
+            }]
+        }, {
+            "@attributes" : {
+                "id" : "content3",
+                "name" : "\u5217 \u8868",
+                "thumb" : "root\/res\/title_all"
+            },
+            "case" : [{
+                "@attributes" : {
+                    "id" : "elebabyList",
+                    "name" : "elebabyList",
+                    "thumb" : "root\/contents\/elebabyList\/elebabyList.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "formStep1",
+                    "name" : "formStep1",
+                    "thumb" : "root\/contents\/formStep1\/formStep1.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "formPerson",
+                    "name" : "formPerson",
+                    "thumb" : "root\/contents\/formPerson\/formPerson.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "reader_catalog",
+                    "name" : "reader_catalog",
+                    "thumb" : "root\/contents\/reader_catalog\/reader_catalog.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "comment",
+                    "name" : "comment",
+                    "thumb" : "root\/contents\/comment\/comment.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "common1",
+                    "name" : "common1",
+                    "thumb" : "root\/contents\/common1\/common1.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "common2",
+                    "name" : "common2",
+                    "thumb" : "root\/contents\/common2\/common2.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "common3",
+                    "name" : "common3",
+                    "thumb" : "root\/contents\/common3\/common3.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "ele_goods",
+                    "name" : "ele_goods",
+                    "thumb" : "root\/contents\/ele_goods\/ele_goods.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "ele_myfav",
+                    "name" : "ele_myfav",
+                    "thumb" : "root\/contents\/ele_myfav\/ele_myfav.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "ele_totaltype",
+                    "name" : "ele_totaltype",
+                    "thumb" : "root\/contents\/ele_totaltype\/ele_totaltype.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "ele_type",
+                    "name" : "ele_type",
+                    "thumb" : "root\/contents\/ele_type\/ele_type.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "ele_list",
+                    "name" : "ele_list",
+                    "thumb" : "root\/contents\/ele_list\/ele_list.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "ele_shopCar",
+                    "name" : "ele_shopCar",
+                    "thumb" : "root\/contents\/ele_shopCar\/ele_shopCar.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "ele_shopHome",
+                    "name" : "ele_shopHome",
+                    "thumb" : "root\/contents\/ele_shopHome\/ele_shopHome.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "elebabydetail",
+                    "name" : "elebabydetail",
+                    "thumb" : "root\/contents\/elebabydetail\/elebabydetail.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "eleDetailtype",
+                    "name" : "eleDetailtype",
+                    "thumb" : "root\/contents\/eleDetailtype\/eleDetailtype.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "function_form3_setting",
+                    "name" : "function_form3_setting",
+                    "thumb" : "root\/contents\/function_form3_setting\/function_form3_setting.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "gallery2",
+                    "name" : "gallery2",
+                    "thumb" : "root\/contents\/gallery2\/gallery2.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "gain",
+                    "name" : "gain",
+                    "thumb" : "root\/contents\/gain\/gain.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "infor",
+                    "name" : "infor",
+                    "thumb" : "root\/contents\/infor\/infor.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "list",
+                    "name" : "list",
+                    "thumb" : "root\/contents\/list\/list.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "list_ec",
+                    "name" : "list_ec",
+                    "thumb" : "root\/contents\/list_ec\/list_ec.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "listBus",
+                    "name" : "listBus",
+                    "thumb" : "root\/contents\/listBus\/listBus.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "mito",
+                    "name" : "mito",
+                    "thumb" : "root\/contents\/mito\/mito.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "myBill",
+                    "name" : "myBill",
+                    "thumb" : "root\/contents\/myBill\/myBill.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "news_addcolumn",
+                    "name" : "news_addcolumn",
+                    "thumb" : "root\/contents\/news_addcolumn\/news_addcolumn.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "news_set",
+                    "name" : "news_set",
+                    "thumb" : "root\/contents\/news_set\/news_set.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "news_photoList",
+                    "name" : "news_photoList",
+                    "thumb" : "root\/contents\/news_photoList\/news_photoList.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "oa_list",
+                    "name" : "oa_list",
+                    "thumb" : "root\/contents\/oa_list\/oa_list.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "picture",
+                    "name" : "picture",
+                    "thumb" : "root\/contents\/picture\/picture.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "picture3",
+                    "name" : "picture3",
+                    "thumb" : "root\/contents\/picture3\/picture3.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "picture4",
+                    "name" : "picture4",
+                    "thumb" : "root\/contents\/picture4\/picture4.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "picture5",
+                    "name" : "picture5",
+                    "thumb" : "root\/contents\/picture5\/picture5.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "read_list4",
+                    "name" : "read_list4",
+                    "thumb" : "root\/contents\/read_list4\/read_list4.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "read_list2",
+                    "name" : "read_list2",
+                    "thumb" : "root\/contents\/read_list2\/read_list2.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "search4",
+                    "name" : "search4",
+                    "thumb" : "root\/contents\/search4\/search4.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "search3",
+                    "name" : "search3",
+                    "thumb" : "root\/contents\/search3\/search3.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "set",
+                    "name" : "set",
+                    "thumb" : "root\/contents\/set\/set.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "set2",
+                    "name" : "set2",
+                    "thumb" : "root\/contents\/set2\/set2.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "set3",
+                    "name" : "set3",
+                    "thumb" : "root\/contents\/set3\/set3.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "shopCar",
+                    "name" : "shopCar",
+                    "thumb" : "root\/contents\/shopCar\/shopCar.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "shopCar2",
+                    "name" : "shopCar2",
+                    "thumb" : "root\/contents\/shopCar2\/shopCar2.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "timeList",
+                    "name" : "timeList",
+                    "thumb" : "root\/contents\/timeList\/timeList.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "weather",
+                    "name" : "weather",
+                    "thumb" : "root\/contents\/weather\/weather.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "oa_news",
+                    "name" : "oa_news",
+                    "thumb" : "root\/contents\/oa_news\/oa_news.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "oa_list",
+                    "name" : "oa_list",
+                    "thumb" : "root\/contents\/oa_list\/oa_list.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "oa_newApply",
+                    "name" : "oa_newApply",
+                    "thumb" : "root\/contents\/oa_newApply\/oa_newApply.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "formPerson2",
+                    "name" : "formPerson2",
+                    "thumb" : "root\/contents\/formPerson2\/formPerson2.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "myBill-pop",
+                    "name" : "myBill-pop",
+                    "thumb" : "root\/contents\/myBill-pop\/myBill-pop.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "order",
+                    "name" : "order",
+                    "thumb" : "root\/contents\/order\/order.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "version",
+                    "name" : "version",
+                    "thumb" : "root\/contents\/version\/version.png"
+                }
+            }]
+        }, {
+            "@attributes" : {
+                "id" : "content4",
+                "name" : "\u8868 \u683c",
+                "thumb" : "root\/res\/title_all"
+            },
+            "case" : [{
+                "@attributes" : {
+                    "id" : "rank",
+                    "name" : "rank",
+                    "thumb" : "root\/contents\/rank\/rank.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "tabcontent",
+                    "name" : "tabcontent",
+                    "thumb" : "root\/contents\/tabcontent\/tabcontent.png"
+                }
+            }]
+        }, {
+            "@attributes" : {
+                "id" : "content5",
+                "name" : "\u6570\u636e\u5f55\u5165",
+                "thumb" : "root\/res\/title_all"
+            },
+            "case" : [{
+                "@attributes" : {
+                    "id" : "ele_comment",
+                    "name" : "ele_comment",
+                    "thumb" : "root\/contents\/ele_comment\/ele_comment.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "formLong",
+                    "name" : "formLong",
+                    "thumb" : "root\/contents\/formLong\/formLong.png"
+                }
+            }]
+        }, {
+            "@attributes" : {
+                "id" : "content6",
+                "name" : "\u6570\u636e\u5c55\u793a",
+                "thumb" : "root\/res\/title_all"
+            },
+            "case" : [{
+                "@attributes" : {
+                    "id" : "business_companyintro",
+                    "name" : "business_companyintro",
+                    "thumb" : "root\/contents\/business_companyintro\/business_companyintro.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "business_contactus",
+                    "name" : "business_contactus",
+                    "thumb" : "root\/contents\/business_contactus\/business_contactus.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "business_enterpriseintro",
+                    "name" : "business_enterpriseintro",
+                    "thumb" : "root\/contents\/business_enterpriseintro\/business_enterpriseintro.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "business_productshow",
+                    "name" : "business_productshow",
+                    "thumb" : "root\/contents\/business_productshow\/business_productshow.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "details1",
+                    "name" : "details1",
+                    "thumb" : "root\/contents\/details1\/details1.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "details",
+                    "name" : "details",
+                    "thumb" : "root\/contents\/details\/details.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "ele_order",
+                    "name" : "ele_order",
+                    "thumb" : "root\/contents\/ele_order\/ele_order.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "read_details",
+                    "name" : "read_details",
+                    "thumb" : "root\/contents\/read_details\/read_details.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "read_list3",
+                    "name" : "read_list3",
+                    "thumb" : "root\/contents\/read_list3\/read_list3.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "reader",
+                    "name" : "reader",
+                    "thumb" : "root\/contents\/reader\/reader.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "statistics",
+                    "name" : "statistics",
+                    "thumb" : "root\/contents\/statistics\/statistics.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "news_articlecommon",
+                    "name" : "news_articlecommon",
+                    "thumb" : "root\/contents\/news_articlecommon\/news_articlecommon.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "news_photoDetail",
+                    "name" : "news_photoDetail",
+                    "thumb" : "root\/contents\/news_photoDetail\/news_photoDetail.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "person",
+                    "name" : "person",
+                    "thumb" : "root\/contents\/person\/person.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "oa_detail",
+                    "name" : "oa_detail",
+                    "thumb" : "root\/contents\/oa_detail\/oa_detail.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "elecoupon",
+                    "name" : "elecoupon",
+                    "thumb" : "root\/contents\/elecoupon\/elecoupon.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "formInfor",
+                    "name" : "formInfor",
+                    "thumb" : "root\/contents\/formInfor\/formInfor.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "formStep2",
+                    "name" : "formStep2",
+                    "thumb" : "root\/contents\/formStep2\/formStep2.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "pie",
+                    "name" : "pie",
+                    "thumb" : "root\/contents\/pie\/pie.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "news_addcolumn1",
+                    "name" : "news_addcolumn1",
+                    "thumb" : "root\/contents\/news_addcolumn1\/news_addcolumn1.png"
+                }
+            }]
+        }, {
+            "@attributes" : {
+                "id" : "content7",
+                "name" : "\u641c\u7d22",
+                "thumb" : "root\/res\/title_all"
+            },
+            "case" : [{
+                "@attributes" : {
+                    "id" : "search",
+                    "name" : "search",
+                    "thumb" : "root\/contents\/search\/search.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "search2",
+                    "name" : "search2",
+                    "thumb" : "root\/contents\/search2\/search2.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "function_form3_search",
+                    "name" : "function_form3_search",
+                    "thumb" : "root\/contents\/function_form3_search\/function_form3_search.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "formSearch",
+                    "name" : "formSearch",
+                    "thumb" : "root\/contents\/formSearch\/formSearch.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "function_form_search",
+                    "name" : "function_form_search",
+                    "thumb" : "root\/contents\/function_form_search\/function_form_search.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "formSearch2",
+                    "name" : "formSearch2",
+                    "thumb" : "root\/contents\/formSearch2\/formSearch2.png"
+                }
+            }]
+        }, {
+            "@attributes" : {
+                "id" : "content8",
+                "name" : "\u6ce8\u518c",
+                "thumb" : "root\/res\/title_all"
+            },
+            "case" : [{
+                "@attributes" : {
+                    "id" : "register",
+                    "name" : "register",
+                    "thumb" : "root\/contents\/register\/register.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "register2",
+                    "name" : "register2",
+                    "thumb" : "root\/contents\/register2\/register2.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "register3",
+                    "name" : "register3",
+                    "thumb" : "root\/contents\/register3\/register3.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "register4",
+                    "name" : "register4",
+                    "thumb" : "root\/contents\/register4\/register4.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "register5",
+                    "name" : "register5",
+                    "thumb" : "root\/contents\/register5\/register5.png"
+                }
+            }]
+        }, {
+            "@attributes" : {
+                "id" : "content9",
+                "name" : "\u4e5d\u5bab\u683c",
+                "thumb" : "root\/res\/title_all"
+            },
+            "case" : [{
+                "@attributes" : {
+                    "id" : "myAccount",
+                    "name" : "myAccount",
+                    "thumb" : "root\/contents\/myAccount\/myAccount.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "share",
+                    "name" : "share",
+                    "thumb" : "root\/contents\/share\/share.png"
+                }
+            }]
+        }, {
+            "@attributes" : {
+                "id" : "content10",
+                "name" : "pop\u7a97",
+                "thumb" : "root\/res\/title_all"
+            },
+            "case" : [{
+                "@attributes" : {
+                    "id" : "oa_approve",
+                    "name" : "oa_approve",
+                    "thumb" : "root\/contents\/oa_approve\/oa_approve.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "common-pop",
+                    "name" : "common-pop",
+                    "thumb" : "root\/contents\/common-pop\/common-pop.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "read_list1",
+                    "name" : "read_list1",
+                    "thumb" : "root\/contents\/read_list1\/read_list1.png"
+                }
+            }, {
+                "@attributes" : {
+                    "id" : "filter",
+                    "name" : "filter",
+                    "thumb" : "root\/contents\/filter\/filter.png"
+                }
+            }]
+        }];
+        var tv_data = [];
+        for (var i in dataSrc) {
+            var cases = dataSrc[i];
+            var item = {
+                header : decodeURIComponent(cases["@attributes"].name),
+                control : "demo",
+                content : []
+            };
+            for (var j in cases["case"]) {
+                var dataitem = cases["case"][j];
+                var listitem = {
+                    title : "案例"+j,
+                    name : "listview",
+                    url : dataitem["@attributes"].id
+                };
+                item.content.push(listitem);
+            }
+            tv_data.push(item);
+        }
+        var tv = appcan.treeview({
+            selector : "#treeview",
+            defaultOpen : 1//默认打开第几项，必须包含数据
+        });
+        tv.set(tv_data);
+        tv.on('listviewClick', function(ele, data, obj) {
+            appcan.locStorage.setVal("demo_page", data.url);
+            appcan.window.open("demo", "demo.html", 10);
+        });
+    </script>
+</html>

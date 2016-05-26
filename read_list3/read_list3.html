@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div id='' class=' ub-fh  uof'>
+            <div id='slider' class='slider'></div>
+        </div>
+        <div class="ub ub-ver ub-f1">
+
+            <div class="ub uinn-b1" id="bookList"></div>
+            <div class="uinn-a1">
+                <div class="ubt bc-border ub ub-ver" id="sortBook"></div>
+            </div>
+            <div class="ub ub-ac c-gra-d6 b-gra-a6 ubt">
+                <div class="ulev-app2 t-bla-28 b-blu-218 uinn-5">
+                    出版图书
+                </div>
+                <div class="ub-f1 tx-r t-blu1-list ulev-4 mar-ar1">
+                    更多
+                </div>
+            </div>
+            <div class="ub uinn-b1" id="bookList2"></div>
+            <div class="uinn-a1">
+                <div class="ubt bc-border ub ub-ver" id="publishing"></div>
+            </div>
+        </div>
+    </body>
+    <script src="../js/appcan.js"></script>
+    <script src="../js/appcan.control.js"></script>
+    <script src="../js/appcan.slider.js"></script>
+    <script src="../js/appcan.listview.js"></script>
+    <script>
+        appcan.ready(function() {
+            bookSort();
+            bannerImg();
+            bookList();
+            bookSort();
+            bookList2();
+            publishing()
+        });
+        function bannerImg() {
+            //产品详情图片轮播
+            var slider = appcan.slider({
+                selector : '#slider',
+                aspectRatio : 9 / 16,
+                hasLabel : false,
+                index : 0
+            });
+            slider.set([{
+                img : "css/myImg/banner1.png"
+            }, {
+                img : "css/myImg/banner1.png"
+            }])
+            slider.on("clickItem", function(index, data) {
+                console.log(index, data);
+
+            })
+        }
+
+        function bookList() {
+            var arrBook = [{
+                "bookImg" : "\'css/myImg/book8.png\'",
+                "bookName" : "草原上的小木屋",
+            }, {
+                "bookImg" : "\'css/myImg/book2.png\'",
+                "bookName" : "大地母亲时代的来临",
+            }, {
+                "bookImg" : "\'css/myImg/book7.png\'",
+                "bookName" : "美容书",
+            }];
+            var tmpl = '<div class="ub ub-ver umar-ar6">' + '	<div ontouchstart="appcan.touch(\'\')" onclick="openDetails(event);" style="background-image:url(${bookImg});" class="ub-img umh-list8 umw-list6">' + '	</div>' + '	<div class="t-gra-4b tx-c ulev-4 uof umw-list6 uinn-r1">${bookName}</div>' + '</div>'
+            var s = appcan.tempRenderList(tmpl, arrBook, appcan.getObjLength(arrBook));
+            $('#bookList')[0].innerHTML = s;
+
+        }
+
+        function bookSort() {
+            var arrBook = [{
+                "sort" : "生活时尚",
+                "book" : "读心术之：看穿你的眼"
+            }, {
+                "sort" : "悬疑小说",
+                "book" : "鬼吹灯"
+            }, {
+                "sort" : "品质书房",
+                "book" : "甄嬛传"
+            }, {
+                "sort" : "成功励志",
+                "book" : "何炅感动推荐：谁青春不迷茫"
+            }, {
+                "sort" : "",
+                "book" : "于丹趣品人生"
+            }];
+            var tmpl = '<div class="ulev-app2 t-bla-28 umar-tn1">${sort}&nbsp|&nbsp${book}</div>'
+            var s = appcan.tempRenderList(tmpl, arrBook, appcan.getObjLength(arrBook));
+            $('#sortBook')[0].innerHTML = s;
+
+        }
+
+        function bookList2() {
+            var arrBook = [{
+                "bookImg" : "\'css/myImg/book1.png\'"
+            }, {
+                "bookImg" : "\'css/myImg/book4.png\'"
+            }, {
+                "bookImg" : "\'css/myImg/book3.png\'"
+            }];
+            var tmpl = '<div class="ub ub-ver umar-ar6">' + '	<div onmousedown="appcan.touch(\'\')" ontouchstart="appcan.touch(\'\')" onclick="openDetails(event);" style="background-image:url(${bookImg});" class="ub-img umh-list8 umw-list6">' + '	</div>' + '</div>'
+            var s = appcan.tempRenderList(tmpl, arrBook, appcan.getObjLength(arrBook));
+            $('#bookList2')[0].innerHTML = s;
+
+        }
+
+        function publishing() {
+            var arrBook = [{
+                "sort" : "生活时尚",
+                "book" : "读心术之：看穿你的眼"
+            }, {
+                "sort" : "悬疑小说",
+                "book" : "鬼吹灯"
+            }, {
+                "sort" : "品质书房",
+                "book" : "甄嬛传"
+            }, {
+                "sort" : "成功励志",
+                "book" : "何炅感动推荐：谁青春不迷茫"
+            }, {
+                "sort" : "",
+                "book" : "于丹趣品人生"
+            }];
+            var tmpl = '<div class="ulev-app2 t-bla-28 umar-tn1">${sort}&nbsp|&nbsp${book}</div>'
+            var s = appcan.tempRenderList(tmpl, arrBook, appcan.getObjLength(arrBook));
+            $('#publishing')[0].innerHTML = s;
+        }
+
+        function openDetails(e) {
+
+            //openNewWin('details','../details/details.html');
+        }
+    </script>
+</html>

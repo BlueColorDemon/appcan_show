@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+    </head>
+    <body class="um-vp bc-bg ub-ver" ontouchstart>
+        <div class="ub">
+            <div id="column" class="sc-bg-active" style="width:4em">
+
+            </div>
+            <div id="listview" class="ub-f1">
+
+            </div>
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        var updateData = [{
+            title : "社会",
+            icon : "./css/myImg/shehui.png"
+        }, {
+            title : "历史",
+            icon : "./css/myImg/lishi.png"
+        }, {
+            title : "军事",
+            icon : "./css/myImg/junshi.png"
+        }, {
+            title : "国内",
+            icon : "./css/myImg/guonei.png"
+        }, {
+            title : "国际",
+            icon : "./css/myImg/guoji.png"
+        }, {
+            title : "探索",
+            icon : "./css/myImg/tansuo.png"
+        }, {
+            title : "深度",
+            icon : "./css/myImg/shendu.png"
+        }, {
+            title : "讨论",
+            icon : "./css/myImg/taolun.png"
+        }, {
+            title : "娱乐",
+            icon : "./css/myImg/yule.png"
+        }, {
+            title : "环保",
+            icon : "./css/myImg/huanbao.png"
+        }, {
+            title : "时尚",
+            icon : "./css/myImg/shishang.png"
+        }];
+        var lv1 = appcan.listview({
+            selector : "#listview",
+            type : "thinLine",
+            hasIcon : true,
+            hasAngle : false,
+            hasCheckbox : true,
+            hasSmallIcon : true,
+            align : 'right'
+        });
+        lv1.set(updateData);
+        var types = [{
+            title : "全部",
+        }, {
+            title : "新闻",
+        }, {
+            title : "娱乐",
+        }, {
+            title : "财经",
+        }, {
+            title : "体育",
+        }, {
+            title : "科技",
+        }, {
+            title : "原创",
+        }, {
+            title : "生活",
+        }, {
+            title : "本地",
+        }, {
+            title : "房产",
+        }, {
+            title : "社会",
+        }];
+        var lv2 = appcan.listview({
+            selector : "#column",
+            type : "thinLine",
+            hasAngle : false,
+            touchClass : "bc-btn"
+        });
+        lv2.set(types);
+    </script>
+</html>

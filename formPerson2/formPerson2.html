@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="ub ub-ver">
+            <div class="ub-img1 perBg uh-per1 ub-fh ub ub-ver">
+                <div class="uinn-a1 ub ub-f1">
+                    <div class="uwh-per2 uc-a-per1 bc-bg ub ub-ac ub-pc uinn-a16">
+                        <div class="ub-fh ub-fv  ub-img setImg1 uc-a-per2"></div>
+                    </div>
+                    <div class="ub-f1 umar-at1 umar-l-per1 ub ub-ver">
+                        <div class="ub ">
+                            <div class="umar-ar3 bc-text-head">
+                                用户名
+                            </div>
+                            <div class="sc-bg-alert uc-a1 uinn3 ulev-2 bc-text-head">
+                                V<span class="ulev-2">2</span>会员
+                            </div>
+                        </div>
+                        <div class="ulev-4 t-wh2 umar-t ub-f1">
+                            个性签名
+                        </div>
+                        <div class="ub ub-ae">
+                            <div class="ub ub-ae umar-r-per1">
+                                <div class="ulev-4">
+                                    积分
+                                </div>
+                                <div class="ulev0 ufm1 umar-l ufsty">
+                                    123
+                                </div>
+                            </div>
+                            <div class="ub ub-ae">
+                                <div class="ulev-4">
+                                    积分
+                                </div>
+                                <div class="ulev0 ufm1 umar-l ufsty">
+                                    123
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ub c-wh-per uinn-a11 ub-ae">
+                    <div class="ub ub-ver ub-f1 ub-pc ubr b-gra-per">
+                        <div class="t-gra5 ulev-4 tx-c ub-f1">
+                            代付款
+                        </div>
+                        <div class="ub-ae sc-text-warn ufm1 tx-c">
+                            2
+                        </div>
+                    </div>
+                    <div class="ub ub-ver ub-f1 ub-pc ubr b-gra-per">
+                        <div class="t-gra5 ulev-4 tx-c ub-f1">
+                            待发货
+                        </div>
+                        <div class="ub-ae t-gra5 ufm1 tx-c">
+                            0
+                        </div>
+                    </div>
+                    <div class="ub ub-ver ub-f1 ub-pc ubr b-gra-per">
+                        <div class="t-gra5 ulev-4 tx-c ub-f1">
+                            待收货
+                        </div>
+                        <div class="ub-ae sc-text-warn ufm1 tx-c">
+                            2
+                        </div>
+                    </div>
+                    <div class="ub ub-ver ub-f1 ub-pc ubr b-gra-per">
+                        <div class="t-gra5 ulev-4 tx-c ub-f1">
+                            待评价
+                        </div>
+                        <div class="ub-ae t-gra5 ufm1 tx-c">
+                            0
+                        </div>
+                    </div>
+                    <div class="ub ub-ver ub-f1 ub-pc">
+                        <div class="t-gra5 ulev-4 tx-c ub-f1">
+                            退款
+                        </div>
+                        <div class="ub-ae sc-text-warn ufm1 tx-c">
+                            2
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ub-f1 ub ub-ver">
+                <div id="listview1"  class="ubt bc-border c-wh  ">
+
+                </div>
+                <div id="listview2"  class="ubt bc-border c-wh umar-at1">
+
+                </div>
+                <div id="listview3"  class="ubt bc-border c-wh umar-at1">
+
+                </div>
+                <div id="listview4"  class="ubt bc-border c-wh umar-at1">
+
+                </div>
+
+            </div>
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        var lv1 = appcan.listview({
+            selector : "#listview1",
+            type : "thinLine",
+            hasIcon : false,
+            hasAngle : true,
+            hasSubTitle : true,
+            multiLine : 1
+        });
+        lv1.set([{
+            title : '全部订单',
+            subTitle : '备注文字'
+        }]);
+        var lv2 = appcan.listview({
+            selector : "#listview2",
+            type : "thinLine",
+            hasIcon : false,
+            hasAngle : true,
+            hasSubTitle : true,
+            multiLine : 1
+        });
+        lv2.set([{
+            title : '我的优惠信息',
+            subTitle : '卡券优惠乐不停'
+        }, {
+            title : '我的日历',
+            subTitle : ''
+        }]);
+        var lv3 = appcan.listview({
+            selector : "#listview3",
+            type : "thinLine",
+            hasIcon : false,
+            hasAngle : true,
+            hasSubTitle : false,
+            multiLine : 1
+        });
+        lv3.set([{
+            title : '宝贝收藏'
+        }, {
+            title : '店铺收藏'
+        }]);
+        var lv4 = appcan.listview({
+            selector : "#listview4",
+            type : "thinLine",
+            hasIcon : false,
+            hasAngle : true,
+            hasSubTitle : false,
+            multiLine : 1
+        });
+        lv4.set([{
+            title : '支付宝'
+        }]);
+    </script>
+</html>

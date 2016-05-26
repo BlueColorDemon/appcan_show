@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/ui-box.css">
+    <link rel="stylesheet" href="../css/ui-base.css">
+    <link rel="stylesheet" href="../css/ui-color.css">
+    <link rel="stylesheet" href="../css/appcan.icon.css">
+    <link rel="stylesheet" href="../css/appcan.control.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="um-vp bc-bg" ontouchstart>
+	<div class="ub ub-pc ub-ac yellow-ef2 us-i-h2 ubb b-gra4">
+		<div class="ub-f1 uinn">
+			<div class="gra-48 ulev-app2 uinn-a12">你好<span class="f-w-b">admin</span></div>
+			<div class="z-d1 ulev-app1">账户余额：￥30000.00</div>
+		</div>
+		<div class="uinn">
+			<div class="uc-a1 uba b-home-gra-eee c-wh us1 ub ub-ac ub-pc uinn">
+				<div class="ub-img res-hicon1 uwh-home1"></div>
+			</div>
+			<div class="ulev-app1 umar-t zong-523">功能模块</div>
+		</div>
+		<div class="uinn">
+			<div class="uc-a1 uba b-home-gra-eee c-wh us1 ub ub-ac ub-pc uinn">
+				<div class="ub-img res-hicon2 uwh-home1"></div>
+			</div>
+			<div class="ulev-app1 zong-523 umar-t">功能模块</div>
+		</div>
+	</div>
+	<div id='' class='umw-slider ub-fh t-bla uof'>
+        <div id='slider' class='slider'>
+        </div>
+		
+    </div>
+	<div class="uinn-m ub-ver ub ub-ab uinn-a9 " id="treeview">
+		
+	</div>
+    <script src="../js/appcan.js"></script>
+    <script src="../js/appcan.control.js"></script>
+    <script src="../js/appcan.slider.js"></script>
+    <script src="../js/appcan.listview.js"></script>
+    <script src="../js/appcan.treeview.js"></script>
+</body>
+<script>
+    appcan.ready(function() {
+        //appcan.initBounce();
+        comImg();
+    })
+    function comImg() {
+        //产品详情图片轮播
+        var slider = appcan.slider({
+            selector : '#slider',
+            aspectRatio : 9 / 16,
+            hasLabel : false,
+            index : 0
+        });
+        slider.set([{
+            img : "css/images/slider.png"
+        }, {
+            img : "css/images/slider.png"
+        }])
+        slider.on("clickItem", function(index, data) {
+            console.log(index, data);
+
+        })
+    }
+var tv = appcan.treeview({
+            selector : "#treeview",
+            defaultOpen : 1//默认打开第几项，必须包含数据
+        });
+        tv.set([{
+            header : "通知公告",
+            content : [{
+                title : '<div class="ub"><div class="gra-48 ulev-app2 ub-f1">通知公告</div><div class="z-d1 ulev-app1">2014-6-31</div></div>'
+            }, {
+                title : '<div class="ub"><div class="gra-48 ulev-app2 ub-f1">通知公告</div><div class="z-d1 ulev-app1">2014-6-31</div></div>'
+            }]
+        }]);
+</script>
+</html>

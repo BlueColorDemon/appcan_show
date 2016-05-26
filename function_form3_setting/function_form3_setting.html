@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="ub ub-ver">
+            <div class="umar-tcon ubt bc-border ubb">
+                <div class="list ub ub-ac umar-lrlist uinn-lrlist ubb bc-border uinn-3">
+                    <div class="res-feedback umwh-micons ub-img ulev-1"></div>
+                    <div class="ub-f1 ut-s uinn-l3">
+                        <span class="ulev-1">意见反馈</span>
+                    </div>
+                    <div class="ulev1 t-c2c">
+                        >
+                    </div>
+                </div>
+                <div id="listview1" class="list mar-lrlist uinn-lrlist  ulev-1"></div>
+
+                <div class="list ub ub-ac umar-lrlist uinn-lrlist uinn-3">
+                    <div class="res-fontsize umwh-micons ub-img ulev-1"></div>
+                    <div class="ub-f1 ut-s umar-lrtxt">
+                        <span class="ulev-1">字体大小</span>
+                    </div>
+                    <div class="ulev1 t-c2c">
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="umar-tcon ubt bc-border ubb">
+                <div class="list ub ub-ac umar-lrlist uinn-lrlist ubb bc-border uinn-3">
+                    <div class="res-cleanstrg umwh-micons ub-img ulev-1"></div>
+                    <div class="ub-f1 ut-s umar-lrtxt">
+                        <span class="ulev-1">清除缓存</span>
+                    </div>
+                    <div class="ulev-1 t-6b9">
+                        1.75MB
+                    </div>
+                </div>
+                <div class="list ub ub-ac umar-lrlist uinn-lrlist ubb bc-border uinn-3">
+                    <div class="res-about umwh-micons ub-img ulev-1"></div>
+                    <div class="ub-f1 ut-s umar-lrtxt">
+                        <span class="ulev-1">关于</span>
+                    </div>
+                    <div class="ulev1 t-c2c">
+                        >
+                    </div>
+                </div>
+                <div class="list ub ub-ac umar-lrlist uinn-lrlist uinn-3">
+                    <div class="res-checkversion umwh-micons ub-img ulev-1"></div>
+                    <div class="ub-f1 ut-s umar-lrtxt">
+                        <span class="ulev-1">检查新版本</span>
+                    </div>
+                    <div class="ulev-1 t-6b9">
+                        3.2
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        var lv1 = appcan.listview({
+            selector : "#listview1",
+            type : "thinLine",
+            hasIcon : true,
+            hasAngle : false,
+            hasControl : true,
+        });
+        lv1.set([{
+            title : "夜间模式",
+            icon : 'css/images/nightmode.png',
+            "switch" : {
+                value : false,
+                mini : true
+            }
+        }, {
+            title : "新消息通知",
+            icon : 'css/images/message.png',
+            "switch" : {
+                value : true,
+                mini : true
+            }
+        }, {
+            title : "无图模式",
+            icon : 'css/images/noimage.png',
+            "switch" : {
+                value : false,
+                mini : true
+            }
+        }]);
+
+        lv1.on("switch:change", function(ele, obj) {
+            //lv1.updateItem(ele,"title","Switch:"+obj.switch.value);
+        })
+    </script>
+</html>

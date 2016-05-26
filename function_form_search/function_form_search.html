@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="ub ub-ver">
+            <div class="umar-body">
+                <div class="ub bc-border ubb  ulev0" id="tabview"></div>
+                <div class="ub umar-t1">
+                    <div class="ub ub-f1 ub-ver c-wh uc-a1 uba b-c0c">
+                        <div class="list ub ub-ac ubb b-c0c uinn-lrlist">
+                            <div class="umw1 umh1 res-departure ub-img umar-lrtxt"></div>
+                            <div class="ut-s">
+                                <span class="ulev-1">出发城市</span>
+                            </div>
+                            <div class="ub-f1 ut-s umar-lrtxt">
+                                <span class="ulev-1">北京</span>
+                            </div>
+                            <div class="ulev1 t-c2c">
+                                >
+                            </div>
+                        </div>
+                        <div class="list ub ub-ac uinn-lrlist">
+                            <div class="umw1 umh1 res-arriving ub-img umar-lrtxt"></div>
+                            <div class="ut-s">
+                                <span class="ulev-1">到达城市</span>
+                            </div>
+                            <div class="ub-f1 ut-s umar-lrtxt">
+                                <span class="ulev-1">上海</span>
+                            </div>
+                            <div class="ulev1 t-c2c">
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ub ub-ac">
+                        <div class="ub ub-ac ub-pc exchange c-wh">
+                            <div class="umwh-ex res-exchange ub-img"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ub umar-t1">
+                    <div class="ub ub-f1 ub-ver c-wh uc-a1 uba b-c0c">
+                        <div class="list ub ub-ac uinn-lrlist">
+                            <div class="umw1 umh1 res-departuredate ub-img umar-lrtxt"></div>
+                            <div class="ut-s">
+                                <span class="ulev-1">出发日期</span>
+                            </div>
+                            <div class="ub-f1 ut-s umar-lrtxt">
+                                <span class="ulev-1">明天</span>
+                            </div>
+                            <div class="ub-f1 ut-s umar-lrtxt t-218">
+                                <span class="ulev-1">2014年02月26日</span>
+                            </div>
+                            <div class="ulev1 t-c2c">
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ub umar-t1">
+                    <div class="ub ub-f1 ub-ver c-wh uc-a1 uba b-c0c">
+                        <div class="list ub ub-ac uinn-lrlist">
+                            <div class="umw1 umh1 res-cabin ub-img umar-lrtxt"></div>
+                            <div class="ut-s">
+                                <span class="ulev-1">舱位选择</span>
+                            </div>
+                            <div class="ub-f1 ut-s umar-lrtxt">
+                                <span class="ulev-1">经济舱</span>
+                            </div>
+                            <div class="ulev1 t-c2c">
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" umar-t1  uinn">
+                    <div class="btn ub ub-ac bc-text-head ub-pc bc-btn uc-a1"  id="btn1">
+                        查询
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.tab.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        var tabview = appcan.tab({
+            selector : "#tabview",
+            hasIcon : false,
+            hasAnim : true,
+            hasLabel : true,
+            hasBadge : false,
+            data : [{
+                label : "单程",
+            }, {
+                label : "往返",
+            }]
+        });
+        tabview.on("click", function(obj, index) {
+        })
+        appcan.button(".btn", "ani-act", function() {
+
+        })
+    </script>
+</html>

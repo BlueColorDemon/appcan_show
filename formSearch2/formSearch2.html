@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="ub ub-ver">
+            <div class="ub-img1 ub-fh uh-fsea ad-fsea"></div>
+            <div class="ub bc-border ubb ubt ulev0" id="tabview"></div>
+            <div class="ub ub-ver uinn-a7 c-wh">
+                <div class="ubb bc-border ub ub-ac c-wh">
+                    <div class="ub-f1">
+                        <ul  class="ub t-bla ub-ac">
+                            <li class=" ub ub-ac ub-pc umar-r-fsea1">
+                                <div class="ub-img icon-fsea1 uwh-fsea"></div>
+                            </li>
+                            <li class="ub-f1 ut-s ulev-app1">
+                                北京
+                            </li>
+                            <li class="ulev2 fa fa-angle-right t-gra4 umar-r-fsea1"></li>
+                        </ul>
+                    </div>
+                    <div class="uh-fsea2 ub ub-ac ubr ubl bc-border uinn-fsea">
+                        <div class="icon-fsea2 ub-img btn_wh1"></div>
+                    </div>
+                    <div class="ub-f1">
+                        <ul  class="ub t-bla ub-ac umar-L-fsea2">
+                            <li class=" ub ub-ac ub-pc umar-r-fsea1 ">
+                                <div class="ub-img icon-fsea1 uwh-fsea"></div>
+                            </li>
+                            <li class="ub-f1 ut-s ulev-app1">
+                                上海
+                            </li>
+                            <li class="ulev2 fa fa-angle-right t-gra4 umar-r-fsea1"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ubb bc-border ub c-wh uh-fsea2 ub ub-ac">
+                    <div class="ub-f1">
+                        <ul  class="ub t-bla ub-ac">
+                            <li class=" ub ub-ac ub-pc umar-r-fsea1">
+                                <div class="ub-img icon-fsea3 uwh-fsea"></div>
+                            </li>
+                            <li class="ub ub-ver ub-f1 ut-s ulev-app1">
+                                <div class="ulev-app1">
+                                    明天
+                                </div>
+                                <div class="ulev-2">
+                                    2014.01.16
+                                </div>
+                            </li>
+                            <li class="ulev2 fa fa-angle-right t-gra4 umar-r-fsea1"></li>
+                        </ul>
+                    </div>
+                    <div id=""class="ubr bc-border"style="width: 1px;height: 100%">
+
+                    </div>
+                    <div class="ub-f1">
+                        <ul class="ub t-bla ub-ac umar-L-fsea2">
+                            <li class=" ub ub-ac ub-pc umar-r-fsea1">
+                                <div class="ub-img icon-fsea3 uwh-fsea"></div>
+                            </li>
+                            <li class="ub ub-ver ub-f1 ut-s ulev-app1">
+                                <div class="ulev-app1">
+                                    后天
+                                </div>
+                                <div class="ulev-2">
+                                    2014.01.16
+                                </div>
+                            </li>
+                            <li class="ulev2 fa fa-angle-right t-gra4 umar-r-fsea1"></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="ub ubb bc-border t-bla ub-ac uh-fsea2 c-wh">
+                    <li class=" ub ub-ac ub-pc umar-r-fsea1">
+                        <div class="ub-img icon-fsea4 uwh-fsea"></div>
+                    </li>
+                    <li class="ub-f1 ut-s ulev-app1">
+                        经济舱
+                    </li>
+                    <li class="ulev2 fa fa-angle-right t-gra4 umar-r-fsea1"></li>
+                </ul>
+                <div class=" uinn uinn-at1">
+                    <div class="btn ub ub-ac bc-text-head ub-pc bc-btn"  id="btn1">
+                        查询
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.tab.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        var tabview = appcan.tab({
+            selector : "#tabview",
+            hasIcon : false,
+            hasAnim : true,
+            hasLabel : true,
+            hasBadge : false,
+            data : [{
+                label : "单程",
+            }, {
+                label : "往返",
+            }]
+        });
+        tabview.on("click", function(obj, index) {
+        })
+
+    </script>
+</html>

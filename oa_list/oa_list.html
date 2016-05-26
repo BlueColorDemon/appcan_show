@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div id="mayList"></div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+            //mayList();
+        })
+        var lv = appcan.listview({
+            selector : "#mayList",
+            type : "multiLine",
+            hasIcon : false,
+            hasAngle : true,
+            hasSubTitle : false
+        });
+        var arrData = [{//0:不通过；1：审批中；2：通过
+            "state" : "1",
+            "matter" : "差旅费报销申请",
+            "approver" : "人事部门张三" //审批人
+        }, {
+            "state" : "2",
+            "matter" : "加班调休",
+            "approver" : "人事部门李四"
+        }, {
+            "state" : "0",
+            "matter" : "年假申请",
+            "approver" : "人事部门王五"
+        }];
+        var listData = [];
+        for (var i = 0,
+            len = arrData.length; i < len; i++) {
+            var list = {
+                title : arrData[i].matter,
+                describe : tmpleCb(arrData[i], "state")
+            }
+            listData.push(list);
+        }
+        lv.set(listData);
+        lv.on('click', function(ele, context, obj, subobj) {
+            //appcan.openWinWithUrl('detail','detail.html');
+        })
+        function tmpleCb(a, b) {
+            var str = "";
+            switch(b) {
+            case "state":
+                if (a.state == "0") {
+                    str = '<div class="ub"><div class="c-red-oa  bc-text-head uinn3 uc-a-list1">不通过</div></div>';
+                    return str;
+                } else if (a.state == "1") {
+                    str = '<div class="ub"><div class="c-orange  bc-text-head uinn3 uc-a-list1">审批中</div></div>';
+                    return str;
+                } else {
+                    str = '<div class="ub"><div class="c-green  bc-text-head uinn3 uc-a-list1">通过（' + a.approver + '审批）</div></div>';
+                    return str;
+                }
+            }
+        }
+
+    </script>
+</html>

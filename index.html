@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <style>
+            .drawer {
+                margin-right: 4em
+            }
+            .shadow {
+                -webkit-box-shadow: inset -4px 1px 3px rgba(0, 0, 0, .2);
+                box-shadow: inset -4px 1px 3px rgba(0, 0, 0, .2)
+            }
+        </style>
+    </head>
+    <body class="um-vp ">
+        <div id="page_0" class="up ub ub-ver bc-bg uhide" tabindex="0" >
+            <div id="header" class="uh sc-bg-active">
+                <div class="ub bc-text ulev2 ub-ac uinn1">
+                    抽屉布局:)
+                </div>
+            </div>
+            <div id="content" class="ub-f1 tx-l shadow drawer">
+                <div id="listview" class="">
+
+                </div>
+            </div>
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.window.open("drawer_main", "drawer_main.html", 10, 256);
+            appcan.window.subscribe("main_window_open", function() {
+                 setTimeout(function(){
+                     $("#page_0").removeClass("uhide");
+                     //fixed render bug todo:判断手机型号
+                    $('body').addClass('foc-ren');
+                    $('body').offset();
+                 }, 1000);
+            })
+        });
+        var lv = appcan.listview({
+            selector : "#listview",
+            type : "thinLine",
+            hasAngle : false,
+            hasControl : true,
+            hasSubTitle : true
+        });
+        lv.set([{
+            title : "分享绑定",
+            subTitle : "<span class='fa fa-angle-right fa-2x'></span>"
+        }, {
+            title : "新闻推送",
+            switch : {
+                mini : true,
+                value : true
+            }
+        }, {
+            title : "夜间免打扰",
+            switch : {
+                mini : true,
+                value : true
+            }
+        }, {
+            title : "2G/3G无图模式",
+            switch : {
+                mini : true,
+                value : false
+            }
+        }, {
+            title : "清除缓存",
+            subTitle : "11.0MB"
+        }, {
+            title : '<div id="close_btn" class="btn ub ub-ac bc-text-head ub-pc sc-btn"  id="btn2">关闭 </div>',
+        }]);
+        //fixed render bug todo:判断手机类型
+        $('body').addClass('foc-ren');
+        $('body').offset();
+        appcan.button("#close_btn", "btn-act", function() {
+            appcan.window.publish("main_window_close","");
+            //appcan.window.close(-1);
+            uexWidgetOne.exit(0);
+        })
+    </script>
+</html>

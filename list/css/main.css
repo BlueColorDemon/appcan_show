@@ -1,0 +1,42 @@
+.listImg1
+{
+	background-image:url('myImg/listIcon1.png');
+}
+.listImg2
+{
+	background-image:url('myImg/listIcon2.png');
+}
+.listImg3
+{
+	background-image:url('myImg/listIcon3.png');
+}
+.listImg4
+{
+	background-image:url('myImg/listIcon4.png');
+}
+.listImg5
+{
+	background-image:url('myImg/listIcon5.png');
+}
+.listImg6
+{
+	background-image:url('myImg/listIcon6.png');
+}
+.listImg7
+{
+	background-image:url('myImg/listIcon7.png');
+}
+.c-gra-list{
+	background-color:#bbbbbb;
+}
+.umar-r-list{
+	margin-right:0.4375em;
+}
+.uwh-list{
+	width:3.6em;
+	height:1.8em;
+}
+.uc-a-list{
+	-webkit-border-radius: 1.8em;
+	border-radius: 1.8em;
+}

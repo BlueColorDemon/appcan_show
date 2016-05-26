@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="ub ub-ver uinn-ag1 bc-head us-itop">
+            <div class="uinn">
+                <div class="sc-bg-active uinput ub ub-f1  bc-border uba">
+                    <div class="uinn fa fa-search sc-text"></div>
+                    <input placeholder="搜索" type="text" class="ub-f1">
+                </div>
+            </div>
+            <div class="ub rel umar-ttop umw-out ">
+                <div class="uabs-0 umwh-1 res-book1 ub-img1 us-ga1" style="z-index:4"></div>
+                <div class="uabs-1 umwh-2 res-book2 ub-img1 us-ga1" style="z-index:3"></div>
+                <div class="uabs-2 umwh-3 res-book3 ub-img1 us-ga1" style="z-index:2"></div>
+                <div class="uabs-3 umwh-4 res-book4 ub-img1 us-ga1" style="z-index:1"></div>
+            </div>
+        </div>
+        <div class="ub ub-ver uinn-m t-a0a" id="bookList"></div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.slider.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+            bookList();
+        })
+        function bookList() {
+            var arrData = [{
+                "bookImg" : "\'css/images/book1.png\'",
+                "bookName" : "苏商(2013.5)",
+                "status" : "下载中..."
+            }, {
+                "bookImg" : "\'css/images/book2.png\'",
+                "bookName" : "大众摄影第5期",
+                "status" : "未读"
+            }, {
+                "bookImg" : "\'css/images/book3.png\'",
+                "bookName" : "时尚先生(214)",
+                "status" : "未读"
+            }, {
+                "bookImg" : "\'css/images/book4.png\'",
+                "bookName" : "电子竞技...期",
+                "status" : "已读1%"
+            }, {
+                "bookImg" : "\'css/images/book1.png\'",
+                "bookName" : "苏商(2013.5)",
+                "status" : "下载中..."
+            }, {
+                "bookImg" : "\'css/images/book2.png\'",
+                "bookName" : "大众摄影第5期",
+                "status" : "未读"
+            }, {
+                "bookImg" : "\'css/images/book3.png\'",
+                "bookName" : "时尚先生(214)",
+                "status" : "未读"
+            }, {
+                "bookImg" : "\'css/images/book4.png\'",
+                "bookName" : "电子竞技...期",
+                "status" : "已读1%"
+            }];
+            var tmpl = '${cb:begin}' + '<div class="ub-f1 ub ub-ver">' + '    <div class="ub-img umwh-mbook" style="background-image:url(${bookImg});"></div>' + '    <div class="umwh-mtext ut-s ulev-4 umar-tg2">${bookName}</div>' + '	<div class="ulev-2 ut-s umwh-mtext umar-t">${status}</div>' + '</div>${cb:end}'
+            var s = appcan.tempRenderList(tmpl, arrData, appcan.getObjLength(arrData), tmpleCb);
+            $('#bookList').html(s);
+        }
+
+        var i = 0;
+        function tmpleCb(a, b) {
+            switch (b[1]) {
+            case 'begin':
+                i++;
+                if (i % 4 == 1) {
+                    return '<div class="ub umar-tg1">'
+                }
+                return '';
+            case 'end':
+
+                if (i % 4 == 0) {
+                    return '</div>'
+                }
+                return '';
+            }
+        }
+
+    </script>
+</html>

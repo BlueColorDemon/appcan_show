@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="c-wh">
+            <div class="resad ub-img7 umwh"></div>
+        </div>
+        <div class="umar-h1 c-wh ubr ubl ubt b-gra" id="sortList"></div>
+        <div class="umh1"></div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+            sortList();
+        })
+        function sortList() {
+            var arrData = [{
+                "sort" : "T恤",
+            }, {
+                "sort" : "休闲裤",
+            }, {
+                "sort" : "打底裤",
+            }, {
+                "sort" : "正装裤",
+            }, {
+                "sort" : "西装",
+            }, {
+                "sort" : "短外套",
+            }, {
+                "sort" : "风衣",
+            }, {
+                "sort" : "休闲裤",
+            }, {
+                "sort" : "羽绒服",
+            }];
+
+            var listData = [];
+            for (var i = 0,
+                len = arrData.length; i < len; i++) {
+                var list = {
+                    title : arrData[i].sort
+                }
+                listData.push(list);
+
+            }
+            var lv1 = appcan.listview({
+                selector : "#sortList",
+                type : "thinLine",
+                hasIcon : false,
+                hasAngle : true,
+                hasSubTitle : false,
+                multiLine : 1,
+                hasCheckbox : false,
+                align : 'left'
+            });
+            lv1.set(listData);
+            lv1.on('click', function(ele, context, obj, subobj) {
+
+            })
+        }
+
+    </script>
+</html>

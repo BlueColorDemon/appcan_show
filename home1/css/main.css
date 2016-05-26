@@ -1,0 +1,90 @@
+.f-w-b{
+	font-weight:bold;
+}
+.gra-48{
+	color:#484848;
+}
+.z-d1{
+	color:#d17225;
+}
+.umw-slider{
+	min-height:10.6em;
+}
+.circlebox{
+	position:absolute;
+	right:0.6em;
+	bottom:0.25em;
+}
+.circle{
+	min-height:0.1875em;
+	min-width:0.1875em;
+	border:0.09375em solid #fff;
+	border-radius:0.1875em;
+	-weibkit-radius:0.1875em;
+	margin-left:0.2em;
+}
+.selected{
+	background-color:#3195d8;
+}
+.uinn-m{
+	padding:.6em;
+}
+.tit{
+	background-color:#218dd5;
+	padding:0.2em;
+	color:#fff;
+	display:inline-block;
+}
+.res-hicon1{
+	background-image:url(images/homeIcon1.png);
+}
+.res-hicon2{
+	background-image:url(images/homeIcon2.png);
+}
+.res-hicon3{
+	background-image:url(images/hm-icon1.png);
+}
+.uwh-icon3{
+	width:0.625em;
+	height:0.625em;
+}
+.uwh-home1{
+	width:2.5em;
+	height:2.5em;
+}
+.umwh-logo{
+	min-height: 1.25em;
+	min-width: 4.1em;
+}
+.content{
+	line-height:1.4em;
+}
+.content p{
+	font-size:0.8em;
+	text-indent: 2em;
+}
+.b-home-gra-eee{
+	border-color:#eeeeee;
+}
+.yellow-ef2{
+	background-color:#efeac2;
+}
+.zong-523{
+	color:#523216;
+}
+.us-i-h2 {
+	-webkit-box-shadow: inset 0px -2px 3px rgba(0, 0, 0, .4);
+	box-shadow: inset 0px -2px 3px rgba(0, 0, 0, .4);
+}
+.c-wh{
+    background-color: white;
+}
+.ulev-app2{
+    font-size:0.9375em;
+}
+.uinn-a12{
+    padding:0.5em 0;
+}
+.ulev-app1{
+    font-size:0.875em;
+}

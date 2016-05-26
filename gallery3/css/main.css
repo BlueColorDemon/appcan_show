@@ -1,0 +1,69 @@
+
+.res-book1{
+	background-image:url(images/book1.png);
+}
+.res-book2{
+	background-image:url(images/book2.png);
+}
+.res-book3{
+	background-image:url(images/book3.png);
+}
+.res-book4{
+	background-image:url(images/book4.png);
+}
+.res-card1{
+	background-image:url(images/card1.png);
+}
+.res-card2{
+	background-image:url(images/card2.png);
+}
+.c-208{
+	background-color:#208bd2;
+}
+.uinn-m{
+	padding: .66em;
+}
+.uinn-mtb{
+	padding: .66em 0;
+}
+.t-tit{
+	color:#686868;
+}
+.t-body{
+	color:#8b8b8b;
+}
+.t-b{
+	font-weight:bold;
+}
+.ulev-tit{
+	font-size:0.9em;
+}
+.umwh-mbook{
+	height:5.8em;
+	width:4.25em;
+}
+.umw-mtext{
+	width:4.25em;
+}
+.umwh-card{
+	min-height:5.875em;
+	min-width:10.175em;
+}
+.ubb-block{
+	border-bottom: 1px solid #ccc;
+}
+.uinn-rbook{
+	padding-right:1.7em;
+}
+.uinn-card{
+	padding:1.875em 0;
+}
+.uinn-lcard{
+	padding-left:0.6em;
+}
+.uinn-tit2{
+	padding-top:0.66em;
+}
+.offscroll{
+    overflow:scroll;
+}

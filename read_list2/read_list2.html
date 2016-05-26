@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="ub ub-ver uinn-a1">
+            <div class="ub ub-ac uba-rl2 b-gra4 uc-a" id="tabview">
+
+            </div>
+            <div class="ub ub-ver" id="listview"></div>
+        </div>
+    </body>
+    <script src="../js/appcan.js"></script>
+    <script src="../js/appcan.control.js"></script>
+    <script src="../js/appcan.tab.js"></script>
+    <script src="../js/appcan.listview.js"></script>
+    <script>
+        appcan.ready(function() {
+
+        });
+        var tabview = appcan.tab({
+            selector : "#tabview",
+            hasIcon : false,
+            hasAnim : true,
+            hasLabel : true,
+            hasBadge : false,
+            data : [{
+                label : "出版",
+            }, {
+                label : "原创",
+            }, {
+                label : "免费",
+            }]
+        });
+        tabview.on("click", function(obj, index) {
+            appcan.window.selectMultiPopover("content", index);
+        })
+        var lv = appcan.listview({
+            selector : "#listview",
+            type : "thickLineTmp",
+            hasIcon : true,
+            hasAngle : false,
+            hasSubTitle : false
+        });
+        lv.set([{
+            icon : "css/myImg/book8.png",
+            title : "三元次口罩",
+            describe : '<div class="ulev-4 tx-l t-gra-4b uinn-RL3">作者：梅子涵</div>' + '<div class="ulev-4 tx-l t-gra-4b">分类：小说文学</div>'
+        }, {
+            icon : "css/myImg/book7.png",
+            title : "壁纸 纯色",
+            describe : '<div class="ulev-4 tx-l t-gra-4b uinn-RL3">作者：梅子涵</div>' + '<div class="ulev-4 tx-l t-gra-4b">分类：小说文学</div>'
+        }, {
+            icon : "css/myImg/book2.png",
+            title : "玄关柜",
+            describe : '<div class="ulev-4 tx-l t-gra-4b uinn-RL3">作者：梅子涵</div>' + '<div class="ulev-4 tx-l t-gra-4b">分类：小说文学</div>'
+        }, {
+            icon : "css/myImg/book1.png",
+            title : "盐津铺子 豆干",
+            describe : '<div class="ulev-4 tx-l t-gra-4b uinn-RL3">作者：梅子涵</div>' + '<div class="ulev-4 tx-l t-gra-4b">分类：小说文学</div>'
+        }]);
+        lv.on('click', function(ele, context, obj, subobj) {
+            //appcan.window.open(context.pagename,context.pageurl,10);
+        })
+
+    </script>
+</html>

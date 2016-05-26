@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="umar-a c-wh ub uc-a1">
+            <div class="ub ub-f1 uinnh2">
+                <div class="reswoman ub-img umwh3"></div>
+                <div class="ub ub-ac ub-f1 umar-l">
+                    服饰内衣促销专场
+                </div>
+            </div>
+            <div class="ub ub-ac ub-pc c-orange uc-r1 uinn5">
+                <div  class="fa fa-angle-right ulev2 sc-text"></div>
+            </div>
+        </div>
+        <div id="showGoods"></div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+            showGoods();
+        })
+        function showGoods() {
+            var arrData = [{
+                "goods" : "\'css/myImg/g6.png\'",
+                "synopsis" : "服饰内衣",
+                "sort" : "女装/男装/内衣",
+            }, {
+                "goods" : "\'css/myImg/g1.png\'",
+                "synopsis" : "鞋靴",
+                "sort" : "流行男鞋/时尚女鞋",
+            }, {
+                "goods" : "\'css/myImg/g2.png\'",
+                "synopsis" : "手机",
+                "sort" : "手机通讯/运营商/手机配件",
+            }, {
+                "goods" : "\'css/myImg/g3.png\'",
+                "synopsis" : "数码",
+                "sort" : "摄影摄像/数码配件/时尚影音",
+            }, {
+                "goods" : "\'css/myImg/g4.png\'",
+                "synopsis" : "电脑办公",
+                "sort" : "电脑整机/电脑配件",
+            }, {
+                "goods" : "\'css/myImg/g5.png\'",
+                "synopsis" : "个护化妆",
+                "sort" : "面部护肤/身体护肤",
+            }];
+            var listData = [];
+            for (var i = 0,
+                len = arrData.length; i < len; i++) {
+                var list = {
+                    title : arrData[i].synopsis,
+                    icon : arrData[i].goods,
+                    describe : arrData[i].sort
+                }
+                listData.push(list);
+
+            }
+            var lv1 = appcan.listview({
+                selector : "#showGoods",
+                type : "thickLine",
+                hasIcon : true,
+                hasAngle : false,
+                hasSubTitle : false,
+                multiLine : 1,
+                hasCheckbox : false,
+                align : 'left'
+            });
+            lv1.set(listData);
+            lv.on('click', function(ele, context, obj, subobj) {
+
+            })
+        }
+
+    </script>
+</html>

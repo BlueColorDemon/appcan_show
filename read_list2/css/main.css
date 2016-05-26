@@ -1,0 +1,40 @@
+.t-gra-4c{
+	color:#4c4c4c;
+}
+.t-bla-36{
+	color:#363636;
+}
+.t-gra-4b{
+	color:#4b4b4b;
+}
+.umh-list8{
+	height:7.8125em;
+}
+.umw-list6{
+	width:5.9375em;
+}
+.uba-rl2{
+	border:0.0625em solid #ccc;
+}
+.uinn-rl{
+	padding:0.71em 0;
+}
+.uinn-RL2{
+	padding:0.9375em 0;
+}
+.uinn-RL3{
+	padding:1em 0 0.6em 0;
+}
+.b-gra-c9{
+	border-color:#c9c9c9;
+}
+
+
+input[type="radio"]:checked + div.c-gra-ccc {
+	background-color:#cccccc;
+	
+}
+input[type="radio"]+div.c-gra-ccc {
+	background-color:#f1f1f1;
+}
+

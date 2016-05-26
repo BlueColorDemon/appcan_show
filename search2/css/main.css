@@ -1,0 +1,36 @@
+.b-gra{
+	border-color:#ababab;
+}
+.b-gra1{
+	border-color:#cacaca;
+}
+.uinnh5{
+	padding:0.8em 0.5em;
+	margin:0;
+}
+.resprice{
+	background-image:url('myImg/price.png');
+}
+.umwh{
+	min-height:1em;
+	min-width:1em;
+}
+.uinn-as2{
+	padding:1em 0.625em;
+}
+.triangle-s2 {
+	width: 0px;
+	border-top: 0.6em solid #bcbcc4;
+	border-right: 0.4em solid #fff;
+	border-bottom: 0;
+	border-left: 0.4em solid #fff;
+}
+.uinn-a11{
+    padding:0.625em 0;
+}
+.uinn-a1{
+    padding:0.625em;
+}
+.umar-at1{
+    margin-top:0.625em;
+}

@@ -1,0 +1,128 @@
+.ulev-sta{
+	font-size:1.5em;
+}
+.ulev-sta2{
+	font-size:2.25em;
+}
+.ulev-sta3{
+	font-size:1.25em;
+}
+.uinn-sta{
+	padding-top:1.25em;
+}
+.uinn-sta1{
+	padding:2.34375em 1.25em;
+}
+.uinn-sta2{
+	padding-top:1.1em;
+}
+.uinn-sta3{
+	padding-top:1.21875em;
+}
+.uinn-sta4{
+	padding-top:0.6em;
+}
+.uinn-sta5{
+	padding-top:0.9em;
+}
+.uinn-sta6{
+	padding:1.125em 2.8125em 0 0;
+}
+.uinn-sta7{
+	padding-top:0.4em;
+}
+.uinn-sta8{
+	padding-left:1.25em;
+}
+.uinn-sta9{
+	padding-top:3.5em;
+}
+.uinn-sta10{
+	padding-top:2.8125em;
+}
+.uinn-sta11{
+	padding-left:0.5em;
+}
+.t-blu-sta{
+	color:#1d86c0;
+}
+.t-blu2-sta{
+	color:#48bafa;
+}
+.t-gra-sta{
+	color:#8e8e8e;
+}
+.uwh-sta{
+	width:9.0625em;
+	height:9.0625em;
+}
+.uwh-sta2{
+	width:5.25em;
+	height:5.25em;
+}
+.uwh-sta4{
+	width:4.4375em;
+	height:4.4375em;
+}
+.uw-sta5{
+	width:2.25em;
+}
+.uh-sta6{
+	height:3.75em;
+}
+.uw-sta7{
+	width:0.3125em;
+}
+.uh-sta8{
+	height:8.0315em;
+}
+.uc-a-sta {
+	-webkit-border-radius: 9.0625em;
+	border-radius: 9.0625em;
+}
+.uc-a-sta2 {
+	-webkit-border-radius: 5.25em;
+	border-radius: 5.25em;
+}
+.uc-a-sta3 {
+	-webkit-border-radius: 4.4375em;
+	border-radius: 4.4375em;
+}
+.uc-a-sta4 {
+	-webkit-border-radius: 2.25em;
+	border-radius: 2.25em;
+}
+.c-blu-sta{
+	background-color:#1d86c0;
+}
+.c-blu-sta2{
+	background-color:#48bafa;
+}
+.c-gra-sta{
+	background-color:#adadad;
+}
+.umar-t-sta{
+	margin-top:0.25em;
+}
+.umar-tb-sta2{
+	margin-top:3.4375em;
+	margin-bottom:-2.9em;
+}
+.umar-sta3{
+	margin:1.1em 0 0 -0.3125em;
+}
+.uabs-sta{
+	position:relative;
+	z-index:100;
+}
+.house{
+	background-image:url('myImg/house.png');
+}
+.uabs-sta2{
+	position:absolute;
+	top:0.5em;
+	left:3.5em;
+}
+.c-org{
+    background: #f78c3e;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <!--列表开始-->
+        <div class="ub ub-ver" id="listview1">
+
+        </div>
+        <!--列表结束-->
+
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        var lv2 = appcan.listview({
+            selector : "#listview1",
+            type : "thinLine",
+            hasIcon : true,
+            hasAngle : true,
+            hasSubTitle : true,
+            multiLine : 1
+        });
+        lv2.set([{
+            icon : 'css/myImg/listIcon1.png',
+            title : '所有',
+            subTitle : ''
+        }, {
+            icon : 'css/myImg/listIcon2.png',
+            title : '时钟',
+            subTitle : '<div class="tx-r t-wh  uwh-list uc-a-list ub ub-ac ub-pc c-gra-list">9999+</div>'
+        }, {
+            icon : 'css/myImg/listIcon3.png',
+            title : '收藏',
+            subTitle : '<div class="tx-r t-wh  uwh-list uc-a-list ub ub-ac ub-pc c-gra-list">9999+</div>'
+        }, {
+            icon : 'css/myImg/listIcon4.png',
+            title : '信息',
+            subTitle : '<div class="tx-r t-wh  uwh-list uc-a-list ub ub-ac ub-pc c-gra-list">9999+</div>'
+        }, {
+            icon : 'css/myImg/listIcon5.png',
+            title : '相机',
+            subTitle : '<div class="tx-r t-wh  uwh-list uc-a-list ub ub-ac ub-pc c-gra-list">9999+</div>'
+        }, {
+            icon : 'css/myImg/listIcon6.png',
+            title : '文件夹',
+            subTitle : '<div class="tx-r t-wh  uwh-list uc-a-list ub ub-ac ub-pc c-gra-list">9999+</div>'
+        }, {
+            icon : 'css/myImg/listIcon7.png',
+            title : '设置',
+            subTitle : '<div class="tx-r t-wh  uwh-list uc-a-list ub ub-ac ub-pc c-gra-list">9999+</div>'
+        }]);
+    </script>
+</html>

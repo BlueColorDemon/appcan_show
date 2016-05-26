@@ -1,0 +1,46 @@
+
+.umw-slider{
+	min-height:11.6em;
+}
+.circlebox{
+	margin-top: -0.375em;
+}
+.ubb-slider{
+	border-bottom:1px solid #218dd5;
+}
+.small{
+	min-height:0.3125em;
+	min-width:0.3125em;
+	border:0.0625em solid #fff;
+	border-radius:0.3125em;
+	-weibkit-radius:0.3125em;
+	margin-right:0.3em;
+	margin-left:0.3em;
+	background-color:#218dd5;
+}
+.large{
+	min-height:0.5625em;
+	min-width:0.5625em;
+	border:0.09375em solid #fff;
+	border-radius:0.5625em;
+	-weibkit-radius:0.5625em;
+	margin-right:0.3em;
+	margin-left:0.3em;
+	background-color:#218dd5;
+}
+.uinn-m{
+	padding:0.6em;
+}
+.tit{
+	background-color:#218dd5;
+	padding:0.2em;
+	color:#fff;
+	display:inline-block;
+}
+.content{
+	line-height:1.4em;
+}
+.content p{
+	text-indent:2em;
+	font-size:0.8em;
+}

@@ -1,0 +1,35 @@
+.b-gra{
+	border-color:#d8d8d8;
+}
+.t-gra1
+{
+	color:#b5b5b5;
+}
+.uinnh5
+{
+	padding:0.8em 0.5em;
+	margin:0;
+}
+.umar-t1{
+	margin:0.5em 0;
+}
+.umhh1{
+	min-height:2.6em;
+}
+input[type = radio] + div > div.t-gra1 {
+	color:#787878;
+	border-bottom:0.21875em solid #fff;
+}
+input[type = radio]:checked + div > div.t-gra1 {
+	border-bottom:0.21875em solid #1788D4;
+    color:#1788D4;
+}
+.uinn-r1{
+	padding:0.4em 0.625em;
+}
+.c-wh2{
+    background-color:#f1f1f1;
+}
+.ulev-app1{
+    font-size:0.875em;
+}

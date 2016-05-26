@@ -1,0 +1,64 @@
+.res-departure{
+	background-image:url(images/departure.png);
+}
+.res-arriving{
+	background-image:url(images/arriving.png);
+}
+.res-cabin{
+	background-image:url(images/cabin.png);
+}
+.res-departuredate{
+	background-image:url(images/departuredate.png);
+}
+.res-exchange{
+	background-image:url(images/exchange.png);
+}
+.c-f6f{
+	background-color:#f6f6f6;
+}
+.umar-body {
+	margin: .66em;
+}
+.umar-t1{
+	margin-top:.625em;
+}
+.b-c0c{
+	border-color:#c0c0c0;
+}
+.list{
+	min-height:2.5em;
+}
+.uinn-lrlist{
+	padding:0 .625em;
+}
+.umar-lrtxt{
+	margin:0 0.5em;
+}
+.t-c2c{
+	color:#c2c2c2;
+}
+.tabcard{
+	padding: .85em 0;
+	text-align:center;
+	border-bottom:1px solid #a1a1a1;
+}
+.cur{
+	background-color:#218dd5;
+	color:#fff;
+	border-bottom:1px solid #218dd5;
+}
+.umwh-ex{
+	min-height:1.6em;
+	min-width:1.6em;
+}
+.exchange{
+	height:2.5em;
+	width:2.5em;
+	border:1px solid #c0c0c0;
+	border-radius:0.3em;
+	-webkit-border-radius:0.3em;
+	margin-left:0.625em;
+}
+.t-218{
+	color:#218dd5;
+}

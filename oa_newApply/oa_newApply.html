@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="uinn-a7">
+            <div class="ub ub-ver">
+                <div class="t-gra-9f ulev-4 uinn-na">
+                    申请人基本信息
+                </div>
+                <div id="listview1" class="ubt ubl ubr bc-border c-wh uc-a1">
+
+                </div>
+            </div>
+            <div class="ub ub-ver">
+                <div class="t-gra-9f ulev-4 uinn-na">
+                    业务信息
+                </div>
+                <div id="listview2" class="ubt ubl ubr bc-border c-wh uc-a1">
+
+                </div>
+
+            </div>
+            <div class="ub ub-ver">
+                <div class="t-gra-9f ulev-4 uinn-na">
+                    出差明细
+                </div>
+                <div id="listview3" class="ubt ubl ubr bc-border c-wh uc-a1">
+
+                </div>
+
+            </div>
+            <br />
+        </div>
+
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        var lv = appcan.listview({
+            selector : "#listview1",
+            type : "singleLine",
+            hasIcon : false,
+            hasAngle : true,
+            hasSubTitle : false
+        });
+        lv.set([{
+            title : "申请人"
+        }, {
+            title : "申请人岗位"
+        }, {
+            title : "申请人部门"
+        }]);
+        lv.on('click', function(ele, context, obj, subobj) {
+        })
+        var lv1 = appcan.listview({
+            selector : "#listview2",
+            type : "singleLine",
+            hasIcon : false,
+            hasAngle : true,
+            hasSubTitle : false
+        });
+        lv1.set([{
+            title : "项目名称"
+        }, {
+            title : "出差事由"
+        }, {
+            title : "收卡账号"
+        }]);
+        lv1.on('click', function(ele, context, obj, subobj) {
+        })
+        var lv2 = appcan.listview({
+            selector : "#listview3",
+            type : "singleLine",
+            hasIcon : false,
+            hasAngle : true,
+            hasSubTitle : false
+        });
+        lv2.set([{
+            title : "金额合计"
+        }, {
+            title : "总出差天数"
+        }]);
+        lv2.on('click', function(ele, context, obj, subobj) {
+        })
+    </script>
+</html>

@@ -1,0 +1,37 @@
+.uf-w{
+	font-weight:bold;
+}
+.res-bookbg1{
+	background-image:url(images/bookbg1.png);
+}
+.res-bookbg2{
+	background-image:url(images/bookbg2.png);
+}
+.res-titbg{
+	background-image:url(images/titbg.png);
+}
+.uts-tit{
+	-webkit-box-shadow:0px 5px 8px rgba(73, 39, 14, 0.5);
+	box-shadow:0px 5px 8px rgba(73, 39, 14, 0.5);
+}
+.umh-tit{
+	min-height:1.875em;
+}
+.umw-qt{
+	width:25%;
+}
+.umwh-mbook{
+	height:5.8em;
+	width:4.25em;
+	position: relative;
+	bottom:0;
+}
+.uinn-mbook{
+	padding: .78125em .625em 0 .625em;
+}
+.t-4a2{
+	color:#4a2b10;
+}
+.uinn-lrtit{
+	padding: 0px 0.66em;
+}

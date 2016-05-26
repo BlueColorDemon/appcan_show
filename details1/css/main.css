@@ -1,0 +1,45 @@
+.c-gra-ef{
+	background-color:#efefef;
+}
+.c-bla-op{
+	background-color:rgba(0,0,0,0.5);
+}
+.uh-det1{
+	height:12.75em;
+}
+.detban{
+	background-image:url('myImg/dban1.png');
+}
+.uinn-det1{
+	padding:0.3125em 0.625em;
+}
+.uinn-det2{
+	padding:0.875em 0.625em;
+}
+.uinn-det3{
+	padding:0.875em 0;
+}
+.t-gra-4e{
+	color:#4e4e4e;
+}
+.t-gra-85{
+	color:#858585;
+}
+.umar-at1{
+    margin-top: .5em;
+}
+.mar-ar1{
+    margin-right: .5em;
+}
+.uinn-a7{
+    padding: .7em;
+}
+.uinn-a1{
+    padding: .4em
+}
+.uinn-a2{
+    padding: 0 .5em;
+}
+.c-wh{
+    background-color: white;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="uinn-a1 ub ub-ver">
+            <div class="ub ub-pc uinn ub-ac c-gra3 uc-a1">
+                <div class="ub-img search umw1 umh1 umar-ar4"></div>
+                <div class="sc-text ulev-1">
+                    搜索全部订单
+                </div>
+            </div>
+            <div class="ub ub-ver uba bc-border c-wh umar-at1">
+                <div class="ub ub-ac ub-pc uinn-a11 ubb bc-border">
+                    <div class="uw-order1 uinn-order1 sc-bg-active uc-a1 tx-c ulev-4 sc-text">
+                        78946515613213123
+                    </div>
+                </div>
+                <div class="uinn-a7 ub ub-ver">
+                    <div class="uinn-a11 ub " id="listview">
+                    </div>
+                    <div class="ub uinn-a11">
+                        <div class="ub ub-ver ub-f1 umar-r-order2">
+                            <div class="ub">
+                                <div class="ulev-4 sc-text">
+                                    合计
+                                </div>
+                                <div class="ub-f1 tx-r sc-text-warn ufm1 ulev-app1">
+                                    ￥19.5
+                                </div>
+                            </div>
+                            <div class="ub">
+                                <div class="ulev-4 sc-text">
+                                    数量
+                                </div>
+                                <div class="ub-f1 tx-r sc-text-warn ufm1 ulev-app1">
+                                    1
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ub ub-ac ub-pe ulev-1">
+
+                            <div class="btn ub ub-ac bc-text-head ub-pc bc-btn uc-a1 mar-ar1">
+                                查看物流
+                            </div>
+                            <div class="btn ub ub-ac bc-text-head ub-pc sc-bg-alert uc-a1">
+                                确认收货
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        var lv1 = appcan.listview({
+            selector : "#listview",
+            type : "thickLine",
+            hasIcon : true,
+            hasAngle : false,
+            hasSubTitle : true,
+            multiLine : 1
+        });
+        lv1.set([{
+            icon : 'css/myImg/img1.png',
+            title : '情人节礼物礼物礼物怡吻手工松露巧克力...',
+            note : '分类：大礼包装',
+            subTitle : '￥19.5',
+            subNote : 'x1'
+        }]);
+        appcan.button(".btn", "ani-act", function() {
+        })
+    </script>
+</html>

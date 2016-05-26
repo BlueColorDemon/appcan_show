@@ -1,0 +1,50 @@
+.shop-wh{
+	min-width:3.17125em;
+	min-height:3.3125em;
+}
+.umwh{
+	min-width:0.6em;
+	min-height:1em;
+}
+.b-ad{
+	border-color:#adadad;
+}
+.ulim12{
+	max-width: 14em;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+input[type="radio"]:checked+div>div.not-btn {
+	background-color: #f1f1f1;
+	color: #4c4c4c;
+}
+input[type="radio"]+div>div.not-btn {
+	background-color: #828282;
+	color: #fff;
+}
+.t-red{
+	color:red;
+}
+.t-a2{
+	color:#a2a2a2;
+}
+.uinn-t{
+	padding: .3em 0;
+}
+.ulev-8{
+	font-size:0.875em;
+}
+.ulev-9{
+	font-size:0.9375em;
+}
+.umar-l{
+	margin-left:.5em;
+}
+.tdlt {
+text-decoration: line-through;
+}
+.uinn-em1{
+	padding:0.83em 0;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="ub ub-ver">
+            <div class="umar-a1">
+                <div class="sc-bg-active uinput ub ub-f1  bc-border uba">
+                    <div class="uinn fa fa-search sc-text"></div>
+                    <input placeholder="搜索你想知道的" type="text" class="ub-f1">
+                </div>
+            </div>
+        </div>
+
+        <div class="ub ub-ver c-wh  uinn-a7" id="listview1">
+
+        </div>
+        <div class="list ub c-gra1 ubt ubb b-dfd"></div>
+        <div class="uinn-lrlist c-wh ub ub-ver">
+            <div class="ub-f1 ub ub-pc umar-tvbtn">
+                <div class="umwh-voicebtn res-voicebtn ub-img"></div>
+            </div>
+            <div class="btn ub ub-ac bc-text-head ub-pc bc-btn uc-a1 umar-tbvbtn"  id="btn1">
+                按住说话
+            </div>
+        </div>
+        <script src="../js/appcan.js"></script>
+        <script src="../js/appcan.control.js"></script>
+        <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        var lv1 = appcan.listview({
+            selector : "#listview1",
+            type : "thinLine",
+            hasIcon : false,
+            hasAngle : true,
+            multiLine : 1
+        });
+        lv1.set([{
+            title : '热门搜索'
+        }, {
+            title : '最近搜索'
+        }, {
+            title : '最近浏览'
+        }, {
+            title : '最近流行'
+        }, {
+            title : '摇一摇'
+        }]);
+        appcan.button(".btn", "ani-act", function() {
+
+        })
+    </script>
+</html>

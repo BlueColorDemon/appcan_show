@@ -1,0 +1,92 @@
+
+.res-search{
+	background-image:url(images/search.png);
+}
+.res-book1{
+	background-image:url(images/book1.png);
+}
+.res-book2{
+	background-image:url(images/book2.png);
+}
+.res-book3{
+	background-image:url(images/book3.png);
+}
+.res-book4{
+	background-image:url(images/book4.png);
+}
+.us-itop{
+	-webkit-box-shadow: inset 0px -3px 8px rgba(0, 0, 0, .5);
+	box-shadow: inset 0px -3px 8px rgba(0, 0, 0, .5);
+}
+.us-ga1{
+	-webkit-box-shadow:  0px 0 15px rgba(0, 0, 0, .5),inset 0px -3px 15px rgba(0, 0, 0, .5);
+	box-shadow:  0px 0 15px rgba(0, 0, 0, .5),inset 0px -3px 15px rgba(0, 0, 0, .5);
+}
+.umw-out{
+	width:100%;
+	height:7.25em;
+}
+.umwh-1{
+	width:28.7%;
+	height:97.84%;
+}
+.umwh-2{
+	width:25.83%;
+	height:91.38%;
+}
+.umwh-3{
+	width:28%;
+	height:100%;
+}
+.umwh-4{
+	width:24.3%;
+	height:87.1%;
+}
+.umwh-mbook{
+	height:5.8em;
+	width:4.25em;
+}
+.umwh-mtext{
+	width:4.25em;
+}
+.uinn-m{
+	padding:0.5em 0.625em 1.6em .625em;
+}
+.uinn-search{
+	padding:0.1em .625em;
+}
+.uabs-0{
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+.uabs-1{
+	position:absolute;
+	bottom:0;
+	left:25.83%;
+}
+.uabs-2{
+	position:absolute;
+	bottom:0;
+	left:50%;
+}
+.uabs-3{
+	position:absolute;
+	bottom:0;
+	left:75.67%;
+}
+.umar-ttop{
+	margin-top:1.375em;
+}
+.t-a0a{
+	color:#a0a0a0;
+}
+.umar-tg1{
+	margin-top:1em;	
+}
+.uinn-ag1{
+	padding:0.625em 0.625em 0 0.625em;
+}
+.umar-tg2{
+	margin-top:0.65em;
+}

@@ -1,0 +1,61 @@
+.pos-infor{
+	position:absolute;
+	top:0;
+	left:-0.0625em;
+}
+.uba-infor{
+	border:0.167em solid #f2f2f2;
+}
+.uc-a-infor2{
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+}
+.uc-a-infor{
+	-webkit-border-radius: 1.167em;
+	border-radius: 1.167em;
+}
+.t-gre-infor{
+	color:#52b51c;
+}
+.t-gra-infor2{
+	color:#b4b4b4;
+}
+.umar-r-infor{
+	margin-right:1.0625em;
+}
+.umar-l-infor{
+	margin-left:-0.3125em;
+}
+.uw-infor1{
+	width:3.75em;
+}
+.c-blu-infor1{
+	background-color:#d9e3ec;
+}
+.del-infor{
+	background-image:url('myImg/del-infor.png');
+}
+.uh-app3{
+	height:2.8125em;
+}
+.uw-app3{
+	width:2.8125em;
+}
+.uwh-infor{
+	width:1.167em;
+	height:1.167em;
+}
+.uc-a-app2{
+	-webkit-border-radius: 2.8125em;
+	border-radius: 2.8125em;
+}
+.c-blu3{
+	background-color:#46b5ff;
+}
+.uinn-a1{
+    padding:0.625em;
+}
+
+.mar-ar1{
+    margin-right:0.625em;
+}

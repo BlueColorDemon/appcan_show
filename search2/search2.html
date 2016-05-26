@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="ub ub-ver uinn-a1">
+            <div class="ub-f1">
+                <div class="sc-bg-active uinput ub ub-f1  bc-border uba">
+                    <div class="uinn fa fa-search sc-text"></div>
+                    <input placeholder="请输入搜索城市" type="text" class="ub-f1">
+                </div>
+            </div>
+            <div class="uba bc-border ub ub-ver umar-at1 ulev-1 sc-text" id="listview">
+
+            </div>
+            <div class="uinn-a11 ub-f1 ub ub-ac ub-pe">
+                <div class="ub ub-pj ub-ac">
+                    <div class="ulev-1 umar-r">
+                        更多
+                    </div>
+                    <div class="triangle-s2 umar-r"></div>
+                </div>
+            </div>
+            <div class="uinn-a7 umar-at1">
+                <div class="btn ub ub-ac bc-text-head ub-pc bc-btn"  id="btn2">
+                    登录
+                </div>
+            </div>
+            <div class="uinn ulev-1">
+                搜索历史
+            </div>
+            <div class="uba bc-border ub ub-ver ulev-1">
+                <div class="ub ubb bc-border uinn-as2">
+                    <div class="ub-f1 umar-l">
+                        知春路
+                    </div>
+                    <div class="fa fa-angle-right sc-text ulev2"></div>
+                </div>
+                <div class="ub ub-ac ub-pc uinn-as2">
+                    清空历史纪录
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../js/appcan.js"></script>
+    <script src="../js/appcan.control.js"></script>
+    <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+        });
+        var lv = appcan.listview({
+            selector : "#listview",
+            type : "thinLineTmp",
+            hasIcon : false,
+            hasAngle : true,
+            hasSubTitle : true
+        });
+        lv.set([{
+            title : "区域",
+            subtitle : "不限"
+        }, {
+            title : "区域",
+            subtitle : "不限"
+        }, {
+            title : "区域",
+            subtitle : "不限"
+        }, {
+            title : "区域",
+            subtitle : "不限"
+        }]);
+        lv.on('click', function(ele, context, obj, subobj) {
+            //appcan.window.open(context.pagename,context.pageurl,10);
+        })
+    </script>
+</html>

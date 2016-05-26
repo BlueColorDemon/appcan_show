@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <!--列表开始-->
+        <div class="uinn-a1" id="listview">
+
+        </div>
+        <!--列表结束-->
+    </body>
+    <script src="../js/appcan.js"></script>
+    <script src="../js/appcan.control.js"></script>
+    <script src="../js/appcan.listview.js"></script>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        });
+
+        var lv = appcan.listview({
+            selector : "#listview",
+            type : "thickLineTmp",
+            hasIcon : true,
+            hasAngle : false,
+            hasSubTitle : false
+        });
+        lv.set([{
+            icon : "css/myImg/goodsImg.png",
+            title : "情人节礼物礼物礼物怡吻手工松露巧克力情人节礼物礼物礼物怡吻手工松露巧克力",
+            describe : '<div class="ub umar-t ub-ac">' + '          <div class="ub-f1 t-gra3 ulev-1">29.5元</div>' + '          <div class="ub-f1 tx-c t-gra3 ulev-1">x</div>' + '          <div class="ub ub-pe ub-f1">' + '              <div ontouchstart="appcan.touch(\'btn-act\')" class=" uwh-pSC1 tx-c uba bc-border uc-a-app1 t-bla mar-ar1">-</div>' + '              <div class="uba uc-a-app1 bc-border uinput uwh-pSC1 mar-ar1 c-wh">    ' + '                  <input placeholder="2"  type="text" class="uinn-pSC3 t-bla tx-c">' + '              </div>  ' + '              <div ontouchstart="appcan.touch(\'btn-act\')" class=" uwh-pSC1 tx-c uba bc-border uc-a-app1 t-bla">+</div>' + '          </div>' + '      </div>'
+        }, {
+            icon : "css/myImg/img2.png",
+            title : "情人节礼物礼物礼物怡吻手工松露巧克力情人节礼物礼物礼物怡吻手工松露巧克力",
+            describe : '<div class="ub umar-t ub-ac">' + '          <div class="ub-f1 t-gra3 ulev-1">65.56元</div>' + '          <div class="ub-f1 tx-c t-gra3 ulev-1">x</div>' + '          <div class="ub ub-pe ub-f1">' + '              <div ontouchstart="appcan.touch(\'btn-act\')" class=" uwh-pSC1 tx-c uba bc-border uc-a-app1 t-bla mar-ar1">-</div>' + '              <div class="uba uc-a-app1 bc-border uinput uwh-pSC1 mar-ar1 c-wh">    ' + '                  <input placeholder="2"  type="text" class="uinn-pSC3 t-bla tx-c">' + '              </div>  ' + '              <div ontouchstart="appcan.touch(\'btn-act\')" class=" uwh-pSC1 tx-c uba bc-border uc-a-app1 t-bla">+</div>' + '          </div>' + '      </div>'
+        }, {
+            icon : "css/myImg/img2.png",
+            title : "情人节礼物礼物礼物怡吻手工松露巧克力情人节礼物礼物礼物怡吻手工松露巧克力",
+            describe : '<div class="ub umar-t ub-ac">' + '          <div class="ub-f1 t-gra3 ulev-1">256.4元</div>' + '          <div class="ub-f1 tx-c t-gra3 ulev-1">x</div>' + '          <div class="ub ub-pe ub-f1">' + '              <div ontouchstart="appcan.touch(\'btn-act\')" class=" uwh-pSC1 tx-c uba bc-border uc-a-app1 t-bla mar-ar1">-</div>' + '              <div class="uba uc-a-app1 bc-border uinput uwh-pSC1 mar-ar1 c-wh">    ' + '                  <input placeholder="2"  type="text" class="uinn-pSC3 t-bla tx-c">' + '              </div>  ' + '              <div ontouchstart="appcan.touch(\'btn-act\')" class=" uwh-pSC1 tx-c uba bc-border uc-a-app1 t-bla">+</div>' + '          </div>' + '      </div>'
+        }]);
+        lv.on('click', function(ele, context, obj, subobj) {
+            // appcan.window.open(context.pagename,context.pageurl,10);
+        })
+
+    </script>
+</html>

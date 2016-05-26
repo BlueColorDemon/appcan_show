@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/ui-base.css">
+    <link rel="stylesheet" href="../css/ui-box.css">
+    <link rel="stylesheet" href="../css/ui-color.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="ub um-vp bc-bg ub-ver" ontouchstart>
+	<div class="uinn-npic1" id="picList">
+	</div>
+		
+			
+</body>
+   <script src="../js/appcan.js"></script>
+    <script src="../js/appcan.control.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+            picList();
+        })
+
+function picList(){
+	var arrData = [{
+		"newsImg":"\'css/myImg/huoban.png\'",
+		"imgTit":"它的小伙伴们",
+		"commentNum":"24",
+		"imgNum":"4",
+	}, {
+		"newsImg":"\'css/myImg/lvse.png\'",
+		"imgTit":"绿色生活",
+		"commentNum":"90",
+		"imgNum":"14",
+	}];
+	var tmpl = '<div class="uinn-npic2" ontouchstart="appcan.touch(\'\')" onclick="openNewWin(\'news_photoDetail\',\'../news_photoDetail/news_photoDetail.html\');">'
+				+'	<div class="uba bc-border c-wh">'
+				+'		<div class="ub-img1 ub-fh uh-npic1" style="background-image:url(${newsImg});"></div>'
+				+'		<div class="ub uinn">'
+				+'			<div class="ulev-4 ub-f1">${imgTit}</div>'
+				+'			<div class="ub ub-pe">'
+				+'				<div class="ub ub-ac umar-npic3">'
+				+'					<div class="ub-img newscommon umw1 umh1 umar-npic1"></div>'
+				+'					<div class="sc-text ulev-2">${commentNum}</div>'
+				+'				</div>'
+				+'				<div class="ub ub-ac">'
+				+'					<div class="ub-img newsunknown umw1 umh1 umar-npic1"></div>'
+				+'					<div class="sc-text ulev-2">${imgNum}</div>'
+				+'				</div>'
+				+'			</div>'
+				+'		</div>'
+				+'	</div>'
+				+'</div>'
+	var s = appcan.tempRenderList(tmpl, arrData, appcan.getObjLength(arrData));
+	var d = document.createElement('DIV');
+  	d.innerHTML=s;
+	$('#picList')[0].appendChild(d);
+}
+
+
+
+</script>
+</html>

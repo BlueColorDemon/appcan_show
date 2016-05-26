@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="../js/zy_control.js"></script>
+        <script src="../js/zy_click.js"></script>
+        <script></script>
+    </head>
+    <body class="um-vp ub ub-ver" style="background-color:rgba(0,0,0,0.5);">
+        <div style="position:absolute;left:0;bottom:0;" class="bc-bg ub-ver ub-fh">
+            <div class="c-wh uinn ub-ver ub-f1" >
+                <div class="ub-f1 umar-a" onclick="closepop()">
+                    <div class="t-gra-book tx-c uelv-1">
+                        <大地母亲的时代来临>
+                            等1本书
+                    </div>
+                </div>
+                <div class="ub-f1 umar-a" onclick="closepop()">
+                    <div class="btn ub ub-ac bc-text-head ub-pc c-red-pop uc-a1"  id="btn2">
+                        删除所选图书
+                    </div>
+                </div>
+                <div class="ub-f1 umar-a" onclick="closepop()">
+                    <div class="btn uba ub ub-ac ub-pc b-gra-pop uc-a1 sc-text"  id="btn2">
+                        取 消
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../js/appcan.js"></script>
+    <script src="../js/appcan.control.js"></script>
+    <script src="../js/appcan.tab.js"></script>
+    <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+        });
+        appcan.button("#btn", "ani-act", function() {
+            $("form").submit();
+        })
+    </script>
+</html>

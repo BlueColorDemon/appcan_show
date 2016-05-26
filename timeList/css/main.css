@@ -1,0 +1,68 @@
+.b-gra-tL{
+	border-color:#cccccc;
+}
+.t-gre-tL{
+	color:#2c9d23;
+}
+.t-gra-tL{
+	color:#b4b4b4;
+}
+.t-gra2-tL{
+	color:#adadad;
+}
+.t-org-tL{
+	color:#f78c3e;
+}
+.uinn-tL{
+	padding:0.1em 0.5em 0 0;
+}
+.uinn-t-tL{
+	padding-top:0.375em;
+}
+.umar-t2-tL{
+	margin-top:0.625em;
+	margin-bottom:-0.625em;
+}
+.uwh-tL{
+	width:0.8125em;
+	height:0.8125em;
+}
+.uwh2-tL{
+	width:0.5em;
+	height:0.5em;
+}
+.uh-tL{
+	height:2.5em;
+}
+.uw-tL{
+	width:0.125em;
+}
+.uc-a-tL {
+	-webkit-border-radius: 0.8125em;
+	border-radius: 0.8125em;
+}
+.uc-a2-tL {
+	-webkit-border-radius: 0.5em;
+	border-radius: 0.5em;
+}
+.c-gre-tL{
+	background-color:#2c9d23;
+}
+.c-gra1-tL{
+	background-color:#c9c9c9;
+}
+.c-org-tL{
+	background-color:#f78c3e;
+}
+.uabs-tL{
+	position:relative;
+	z-index:100;
+}
+.uabs-tle{
+	position:absolute;
+	left:2.85em;
+	top:0;
+	z-index:10;
+}
+
+

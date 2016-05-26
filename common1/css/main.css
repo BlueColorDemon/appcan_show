@@ -1,0 +1,73 @@
+
+.res-avator{
+	background-image:url(images/avator.png);
+}
+.c-bad{
+	background-color:#bad538;
+}
+.c-faa{
+	background-color:#faa701;
+}
+.c-ffe{
+	background-color:#ffe400;
+}
+.c-00a{
+	background-color:#00adef;
+}
+.c-4e6{
+	background-color:#4e6cbc;
+}
+.res-order{
+	background-image:url(images/order.png);
+}
+.res-wallet{
+	background-image:url(images/wallet.png);
+}
+.res-message{
+	background-image:url(images/message.png);
+}
+.res-favorite{
+	background-image:url(images/favorite.png);
+}
+.res-pwdprotection{
+	background-image:url(images/pwdprotection.png);
+}
+.res-arrow{
+	background-image:url(images/arrow.png);
+}
+.uinn-out{
+	padding:0.625em;
+}
+.t-686{
+	color:#686868;
+}
+.umwh-m{
+	min-height:1.875em;
+	min-width:1.875em;
+}
+.uinn-m{
+	padding:1em 0.78em 1em 1.25em;
+}
+.uinn-mtxt{
+	padding-left:1.6em;
+}
+.uinn-avator{
+	padding:1em;
+}
+.umar-avator{
+	margin-top:0.625em;
+}
+.umar-lname{
+	margin-left:1em;
+}
+.umwh-avator{
+	min-height:4.75em;
+	min-width:4.75em;
+}
+.uc-a2{
+	-webkit-border-radius: 2.5em;
+	border-radius: 2.5em
+}
+.ub-a2{
+	border: 1px solid #fff;
+}

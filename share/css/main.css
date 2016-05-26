@@ -1,0 +1,40 @@
+.c-bla-50{
+	background-color:rgba(0,0,0,0.5);
+}
+.c-pink{
+	background-color:#f6ebe6;
+}
+.uwh-share{
+	width:3.125em;
+	height:3.125em;
+}
+.share1{
+	background-image:url('myImg/share1.png');
+}
+.share2{
+	background-image:url('myImg/share2.png');
+}
+.share3{
+	background-image:url('myImg/share3.png');
+}
+.share4{
+	background-image:url('myImg/share4.png');
+}
+.share5{
+	background-image:url('myImg/share5.png');
+}
+.share6{
+	background-image:url('myImg/share6.png');
+}
+.umar-t-share{
+	margin-top:1.25em;
+}
+.uinn-share{
+	padding:0 0.625em 1.25em 0.625em; 
+}
+.umar-at1{
+    margin-top:0.625em;
+}
+.t-gra3{
+    color:#484848;
+}

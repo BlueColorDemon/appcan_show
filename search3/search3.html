@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/ui-box.css">
+        <link rel="stylesheet" href="../css/ui-base.css">
+        <link rel="stylesheet" href="../css/ui-color.css">
+        <link rel="stylesheet" href="../css/appcan.icon.css">
+        <link rel="stylesheet" href="../css/appcan.control.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script></script>
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="uinn-sea3-1" id="tabview">
+           
+        </div>
+        <div class="uinn-a7">
+            <div class="uinn-sea3-2 uba-sea3 mar-ar1 umar-at1 uc-a1 ufl t-gra-82 ulev-1">
+                眼镜
+            </div>
+            <div class="uinn-sea3-2 uba-sea3 mar-ar1 umar-at1 uc-a1 ufl t-gra-82 ulev-1">
+                皮衣
+            </div>
+            <div class="uinn-sea3-2 uba-sea3 mar-ar1 umar-at1 uc-a1 ufl t-gra-82 ulev-1">
+                墨镜
+            </div>
+            <div class="uinn-sea3-2 uba-sea3 mar-ar1 umar-at1 uc-a1 ufl t-gra-82 ulev-1">
+                牛仔裤
+            </div>
+            <div class="uinn-sea3-2 uba-sea3 mar-ar1 umar-at1 uc-a1 ufl t-gra-82 ulev-1">
+                雾霾口罩
+            </div>
+            <div class="uinn-sea3-2 uba-sea3 mar-ar1 umar-at1 uc-a1 ufl t-gra-82 ulev-1">
+                棉鞋
+            </div>
+            <div class="uinn-sea3-2 uba-sea3 mar-ar1 umar-at1 uc-a1 ufl t-gra-82 ulev-1">
+                阿依莲羽绒服
+            </div>
+            <div class="uinn-sea3-2 uba-sea3 mar-ar1 umar-at1 uc-a1 ufl t-gra-82 ulev-1">
+                降噪耳机
+            </div>
+            <div class="uinn-sea3-2 uba-sea3 mar-ar1 umar-at1 uc-a1 ufl t-gra-82 ulev-1">
+                外套 男
+            </div>
+            <div class="uinn-sea3-2 uba-sea3 mar-ar1 umar-at1 uc-a1 ufl t-gra-82 ulev-1">
+                连衣裙
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="uinn-a7 umar-at1">
+            <div class="btn ub ub-ac bc-text-head ub-pc bc-btn"  id="btn2">
+                登录
+            </div>
+        </div>
+    </body>
+    <script src="../js/appcan.js"></script>
+    <script src="../js/appcan.control.js"></script>
+    <script src="../js/appcan.tab.js"></script>
+    <script src="../js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+        });
+        var tabview = appcan.tab({
+            selector : "#tabview",
+            hasIcon : false,
+            hasAnim : true,
+            hasLabel : true,
+            hasBadge : false,
+            data : [{
+                label : "最近搜索",
+            }, {
+                label : "热门推选",
+            }]
+        });
+        tabview.on("click", function(obj, index) {
+            appcan.window.selectMultiPopover("content", index);
+        })
+        appcan.button("#btn", "ani-act", function() {
+            $("form").submit();
+        })
+    </script>
+</html>
